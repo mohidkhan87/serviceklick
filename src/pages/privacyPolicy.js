@@ -1,9 +1,17 @@
 import React from 'react'
 
-const privacyPolicy = () => {
+import HeaderWithSearch from '../components/shared/navigation/HeaderWithSearch'
+import Footer from '../components/shared/navigation/Footer'
+
+import Content from '../components/pages/PrivacyPolicy/Content'
+const TermsAndConditions = () => {
   return (
-    <div>privacyPolicy</div>
+    <>
+      <HeaderWithSearch />
+      <Content />
+      <Footer />
+    </>
   )
 }
 
-export default privacyPolicy
+export default TermsAndConditions

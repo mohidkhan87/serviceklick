@@ -9,6 +9,7 @@ module.exports = {
         secondary: '#660019',
         lightGray: '#F5F7FA',
         darkGray: '#818799',
+        skyBlue: '#F5F7FA'
         // darkGray: '#81858E',
       }
     },
