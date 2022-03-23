@@ -11,6 +11,9 @@ module.exports = {
         darkGray: '#818799',
         skyBlue: '#F5F7FA'
         // darkGray: '#81858E',
+      },
+      backgroundImage: {
+        'professional-bg': "url('/src/assets/images/pages/homepage/professional-bg.svg')",
       }
     },
   },

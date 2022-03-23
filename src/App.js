@@ -1,6 +1,6 @@
 import './App.css';
 // import Footer from './components/shared/navigation/Footer';
-// import Header from './components/shared/navigation/Header';
+import Header from './components/shared/navigation/Header';
 
 import { Routes, Route } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ function App() {
   return (
 
     <>
-      {/* <Header /> */}
+      <Header />
       <Routes >
         <Route path='/' exact element={<Home />} />
         <Route path='/faqs' element={<Faqs />} />
