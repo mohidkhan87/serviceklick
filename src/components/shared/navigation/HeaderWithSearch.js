@@ -18,9 +18,9 @@ const HeaderWithSearch = () => {
                 </div>
                 <div className='hidden lg:block'>
                     <div className='border h-full rounded-3xl py-1 pl-4 pr-1'>
-                        <div className='grid grid-cols-3 h-full gap-4'>
-                            <div className='col-span-2'><input type='text' placeholder='Search for help articles' className='outline-none w-full h-full text-sm' /></div>
-                            <div className='h-full'><button className='bg-secondary w-full h-full rounded-full text-white font-bold text-xs'>Search</button></div>
+                        <div className='flex h-full gap-4'>
+                            <div className='flex-1'><input type='text' placeholder='Search for help articles' className='outline-none w-full h-full text-sm' /></div>
+                            <div className='w-32 h-full'><button className='bg-secondary w-full h-full rounded-full text-white font-bold text-xs'>Search</button></div>
                         </div>
                     </div>
                 </div>
