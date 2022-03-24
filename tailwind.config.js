@@ -10,10 +10,15 @@ module.exports = {
         lightGray: "#F5F7FA",
         darkGray: "#818799",
         skyBlue: "#F5F7FA",
-        lightPink: "#FCECE9"
+        lightPink: "#FCECE9",
+        customGray: '#C0C3CC',
+        darkYellow: '#FCA101'
       },
       fontFamily: {
         'sans': ['silka', ...defaultTheme.fontFamily.sans],
+      },
+      borderRadius: {
+        ellipseCurve: '0 0 0 100%'
       },
       backgroundImage: {
         "professional-bg":
