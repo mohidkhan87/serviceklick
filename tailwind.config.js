@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -8,7 +10,9 @@ module.exports = {
         lightGray: "#F5F7FA",
         darkGray: "#818799",
         skyBlue: "#F5F7FA",
-        // darkGray: '#81858E',
+      },
+      fontFamily: {
+        'sans': ['silka', ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
         "professional-bg":
