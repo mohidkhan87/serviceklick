@@ -11,7 +11,7 @@ import ServiceAd from "../components/pages/homepage/ServiceAd";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-gray-100">
       <HeaderWithPoster />
       <Poster />
       <ServiceAd />

@@ -24,7 +24,7 @@ const ServiceAd = () => {
             </div>
             you for free.
           </div>
-          <p className="my-5 text-darkGray">
+          <p className="my-5 text-lg text-darkGray">
             See price estimates, read reviews and chat with pros, all in the
             app.
           </p>
