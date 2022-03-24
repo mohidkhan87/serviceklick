@@ -2,7 +2,7 @@ import React from 'react'
 
 const Newsroom = () => {
   return (
-    <div>Newsroom</div>
+    <div style={{'font-family': "silkablack"}}>Newsroom</div>
   )
 }
 

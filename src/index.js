@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+// Fonts
+import './assets/fonts/Silka-Roman-Webfont/stylesheet.css'
+import './assets/fonts/Silka-Italic-Webfont/stylesheet.css'
+
 import App from './App';
 import { BrowserRouter } from "react-router-dom";
 
