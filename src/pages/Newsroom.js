@@ -5,7 +5,8 @@ import Footer from '../components/shared/navigation/Footer'
 
 import Poster from '../components/pages/newsroom/Poster'
 import Blogs from '../components/pages/newsroom/Blogs'
-import PopularBlogs from '../components/pages/newsroom/Blogs'
+import PopularBlogs from '../components/pages/newsroom/PopularBlogs'
+import Banner from '../components/pages/newsroom/Banner'
 import FindAndHire from '../components/pages/newsroom/FindAndHire'
 
 const Newsroom = () => {
@@ -16,6 +17,7 @@ const Newsroom = () => {
       <Poster />
       <Blogs />
       <PopularBlogs />
+      <Banner />
       <FindAndHire />
 
       <Footer />
