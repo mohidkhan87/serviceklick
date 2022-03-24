@@ -10,6 +10,7 @@ module.exports = {
         lightGray: "#F5F7FA",
         darkGray: "#818799",
         skyBlue: "#F5F7FA",
+        lightPink: "#FCECE9"
       },
       fontFamily: {
         'sans': ['silka', ...defaultTheme.fontFamily.sans],
