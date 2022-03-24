@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import Header from './../components/shared/navigation/Header';
+import HeaderWithPoster from '../components/shared/navigation/HeaderWithPoster';
 import Footer from './../components/shared/navigation/Footer';
 
 import Poster from "../components/pages/homepage/Poster";
@@ -12,7 +12,7 @@ import News from "../components/pages/homepage/News";
 const Home = () => {
   return (
     <div>
-      <Header />
+      <HeaderWithPoster />
       <Poster />
       <Services />
       <Satisfaction />

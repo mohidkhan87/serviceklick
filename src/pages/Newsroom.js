@@ -1,8 +1,14 @@
 import React from 'react'
 
+import Header from '../components/shared/navigation/Header'
+import Footer from '../components/shared/navigation/Footer'
+
 const Newsroom = () => {
   return (
-    <div style={{'font-family': "silkablack"}}>Newsroom</div>
+    <div>
+      <Header title="Serviceklick Newsroom" />
+      <Footer />
+    </div>
   )
 }
 
