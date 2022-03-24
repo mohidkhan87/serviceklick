@@ -105,7 +105,7 @@ const Poster = () => {
                     {/*     Search Results     */}
                     {/* ====================== */}
                     {isSearching && (
-                      <div className="absolute top-full left-0 w-full transform translate-y-2 rounded-3xl rounded-tr-none bg-white overflow-y-scroll scrollbar-none py-5 px-6">
+                      <div className="absolute top-full left-0 w-full transform translate-y-2.5 rounded-3xl rounded-tr-none bg-white overflow-y-scroll scrollbar-none py-5 px-6">
                         <h1 className="font-bold">Services</h1>
                         {services.map((service) => (
                           <div className="flex items-center gap-3 my-2">
@@ -138,7 +138,7 @@ const Poster = () => {
                 <div className="flex items-center gap-3 mt-6 font-bold">
                   Popular:
                   {popularSearches.map((search) => (
-                    <p className="flex-shrink-0 border border-white text-sm py-px px-3 font-normal rounded-full">
+                    <p className="flex-shrink-0 border border-white text-sm py-0.5 px-3 font-normal rounded-full">
                       {search.name}
                     </p>
                   ))}
