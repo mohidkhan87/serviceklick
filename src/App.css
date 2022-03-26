@@ -5,3 +5,72 @@
 .scrollbar-none::-webkit-scrollbar {
   display: none;
 }
+/* --------------------------------- */
+/*              HOME PAGE           */
+/* -------------------------------- */
+
+/* Slick slider arrows */
+
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+
+/* Ellipse Profiles */
+.ellipse-circle-2 {
+  position: absolute;
+  top: 75%;
+  left: 5%;
+}
+.ellipse-circle-4 {
+  position: absolute;
+  top: 80%;
+  right: 10%;
+}
+
+/* Inner Ellipse Profiles */
+.inner-ellipse-circle-2 {
+  position: absolute;
+  top: 75%;
+  left: 5%;
+}
+.inner-ellipse-circle-4 {
+  position: absolute;
+  top: 60%;
+  right: -3%;
+}
+
+/* Profile Detail */
+.profile-detail {
+  width: 420px;
+}
+
+/* Region and payment modal */
+.region-modal {
+  width: 95%;
+  max-width: 700px;
+  max-height: 500px;
+}
+
+@media screen and (max-width: 639px) {
+  .profile-detail {
+    width: 100vw;
+    /* display: none; */
+  }
+}
+@media screen and (max-width: 509px) {
+  .inner-ellipse {
+    display: none;
+  }
+
+  .ellipse-circle-2 {
+    position: absolute;
+    top: 65%;
+    left: -1%;
+  }
+  .ellipse-circle-4 {
+    position: absolute;
+    top: 74%;
+    right: 3%;
+  }
+}

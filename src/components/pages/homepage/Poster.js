@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import HeaderWithPoster from "../../shared/navigation/HeaderWithPoster";
+
 import Container from "../../ui/Container";
 import PosterImage from "../../../assets/images/pages/homepage/poster-img.svg";
 import CustomerImage from "../../../assets/images/pages/homepage/customer-poster-img.svg";
@@ -47,68 +49,72 @@ const Poster = () => {
 
   return (
     <div
-      className={`${
+      className={` ${
         isClient === "professional" ? "bg-professional-bg" : "bg-customer-bg"
-      } bg-cover bg-bottom bg-no-repeat w-full md:pt-40 pt-36`}
+      } bg-cover bg-bottom bg-no-repeat w-full lg:pt-40 md:pb-0 pb-20 md:pt-36 pt-24`}
     >
-      <Container>
-        <div className="grid grid-cols-2 text-white">
-          <div>
-            <div className="flex gap-5 border-b-2 border-darkGray border-opacity-50 w-max">
-              <h1
-                className={`transition duration-200 ease-linear font-bold -mb-0.5 cursor-pointer pb-1 ${
-                  isClient === "professional"
-                    ? "border-b-2 border-white"
-                    : "opacity-60"
-                }`}
-                onClick={() => setIsClient("professional")}
-              >
-                Hire a Professional
-              </h1>
+      <HeaderWithPoster isSearching={isSearching} />
 
-              <h1
-                className={`transition duration-200 ease-linear font-bold -mb-0.5 cursor-pointer pb-1 ${
-                  isClient === "customer"
-                    ? "border-b-2 border-white"
-                    : "opacity-60"
-                }`}
-                onClick={() => setIsClient("customer")}
-              >
-                Find Customers
-              </h1>
+      <Container>
+        <div className="grid md:grid-cols-2 grid-cols-1 xl:gap-0 gap-8 text-white">
+          <div>
+            <div className="overflow-x-scroll scrollbar-none">
+              <div className="flex gap-5 border-b-2 border-darkGray border-opacity-50 w-max ">
+                <h1
+                  className={`transition duration-200 ease-linear sm:text-base text-sm sm:font-bold font-semibold -mb-0.5 cursor-pointer pb-1 ${
+                    isClient === "professional"
+                      ? "border-b-2 border-white"
+                      : "opacity-60"
+                  }`}
+                  onClick={() => setIsClient("professional")}
+                >
+                  Hire a Professional
+                </h1>
+
+                <h1
+                  className={`transition duration-200 ease-linear sm:text-base text-sm sm:font-bold font-semibold -mb-0.5 cursor-pointer pb-1 ${
+                    isClient === "customer"
+                      ? "border-b-2 border-white"
+                      : "opacity-60"
+                  }`}
+                  onClick={() => setIsClient("customer")}
+                >
+                  Find Customers
+                </h1>
+              </div>
             </div>
             <div className="my-5">
               {isClient === "professional" ? (
-                <h1 className="text-5xl font-bold">
-                  Find local <br /> Professionals for <br /> pretty much
-                  anything.
+                <h1 className="2xl:text-6xl xl:text-5xl lg:text-4xl sm:text-3xl text-2xl font-bold">
+                  Find local Professionals for pretty much anything.
                 </h1>
               ) : (
-                <h1 className="text-5xl font-bold">
-                  Find local customers <br /> and start earning <br /> today
-                  with Completely.
+                <h1 className="2xl:text-6xl xl:text-5xl lg:text-4xl sm:text-3xl text-2xl font-bold">
+                  Find local customers and start earning today with Completely.
                 </h1>
               )}
             </div>
             {isClient === "professional" ? (
               <>
-                <div className="w-full relative flex justify-between items-stretch gap-2 bg-white text-black rounded-full p-1 mt-7 z-10">
-                  <div className="relative w-64 ">
+                <div className="md:w-full sm:w-10/12 w-full relative flex justify-between items-center lg:gap-2 bg-white text-black rounded-full p-1 mt-7 z-50">
+                  <div className="relative xl:w-64 w-full z-50">
                     <input
                       type="text"
                       placeholder="What's on your to-do list?"
-                      className="w-full rounded-full py-2 px-4 outline-none"
+                      className="w-full rounded-full lg:py-2 md:py-1.5 py-1 text-sm sm:text-base px-4 outline-none"
                       onFocus={() => setIsSearching(true)}
-                      onBlur={() => setIsSearching(false)}
                     />
                     {/* ====================== */}
                     {/*     Search Results     */}
                     {/* ====================== */}
                     {isSearching && (
-                      <div className="absolute top-full left-0 w-full transform translate-y-2.5 rounded-3xl rounded-tr-none bg-white overflow-y-scroll scrollbar-none py-5 px-6">
+                      <div className="absolute top-full left-0 w-full transform translate-y-2.5 rounded-3xl rounded-tr-none bg-white overflow-y-scroll scrollbar-none py-5 px-6 z-50">
                         <h1 className="font-bold">Services</h1>
-                        {services.map((service) => (
-                          <div className="flex items-center gap-3 my-2">
+                        {services.map((service, index) => (
+                          <div
+                            className="flex items-center gap-3 my-2"
+                            key={index}
+                          >
                             <img src={Service} alt="" className="w-12" />
                             <p className="font-semibold text-sm text-red-800">
                               {service.title}
@@ -128,17 +134,22 @@ const Poster = () => {
                     )}
                   </div>
                   <div className="flex-shrink-0 flex items-center gap-3">
-                    <img src={Location} alt="" />
-                    <p className="flex items-center text-darkGray">8006</p>
-                    <button className=" font-semibold text-sm text-white bg-secondary py-2.5 px-7 ml-4 rounded-full">
+                    <img src={Location} alt="" className=" hidden xl:block" />
+                    <p className="hidden xl:flex items-center text-darkGray">
+                      8006
+                    </p>
+                    <button className="font-medium sm:font-semibold text-sm text-white bg-secondary lg:py-2.5 md:py-2 py-1.5 lg:px-7 px-5 ml-4 rounded-full">
                       Search
                     </button>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 mt-6 font-bold">
+                <div className="flex items-center flex-wrap gap-3 mt-6 font-bold">
                   Popular:
-                  {popularSearches.map((search) => (
-                    <p className="flex-shrink-0 border border-white text-sm py-0.5 px-3 font-normal rounded-full">
+                  {popularSearches.map((search, index) => (
+                    <p
+                      className="flex-shrink-0 border border-white text-sm py-0.5 px-3 font-normal rounded-full"
+                      key={index}
+                    >
                       {search.name}
                     </p>
                   ))}
@@ -149,24 +160,27 @@ const Poster = () => {
                 <p>
                   Dowload our App and Sign-Up to start growing your business.
                 </p>
-                <button className="py-2 px-5 rounded-full flex items-center gap-3 font-bold text-black bg-white mt-4">
+                <button className="py-2 px-5 sm:text-base text-sm rounded-full flex items-center gap-3 font-bold text-black bg-white mt-4">
                   Get Started
                   <img src={ArrowRight} alt="arrow" className="w-5" />
                 </button>
               </>
             )}
           </div>
-          <div className=" pl-28 pb-px border-red-700 overflow-hidden">
+          <div className=" pb-px hidden md:flex justify-end overflow-hidden">
             <img
               src={isClient === "professional" ? PosterImage : CustomerImage}
               alt="poster"
               style={{ width: "450px" }}
-              className=""
+              className="rounded-b-3xl "
             />
           </div>
         </div>
         {isSearching && (
-          <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60"></div>
+          <div
+            className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 z-40"
+            onClick={() => setIsSearching(false)}
+          ></div>
         )}
       </Container>
     </div>

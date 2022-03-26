@@ -2,6 +2,7 @@ import { useState } from "react";
 import React from "react";
 import Container from "../../ui/Container";
 import CleaningPoster from "../../../assets/images/pages/homepage/cleaning-poster.svg";
+import sliderArrow from "../../../assets/images/pages/homepage/slider/slider-arrow.svg";
 import Image1 from "../../../assets/images/pages/homepage/slider/slide-1.svg";
 import Image2 from "../../../assets/images/pages/homepage/slider/slide-2.svg";
 import Image3 from "../../../assets/images/pages/homepage/slider/slide-3.svg";
@@ -19,16 +20,46 @@ const Services = () => {
     { isDisabled: true, title: "Wellness" },
   ];
   const [tabs] = useState(tabsData);
+  const [sliderRef, setSliderRef] = useState(null); // set the slider
+  let [slideBack, setSlideBack] = useState(0);
+
+  //
   const handleTab = (tabNumber) => {
     setOpenTab(tabNumber);
   };
   //   Slider Options
+  let showSlides = 5;
   const settings = {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 5,
+    swipe: false,
+    slidesToShow: showSlides,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          centerMode: true,
+          infinite: true,
+          dots: false,
+          swipe: true,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerMode: true,
+          infinite: true,
+          dots: false,
+          swipe: true,
+        },
+      },
+    ],
   };
   const sliderData = [
     {
@@ -64,7 +95,7 @@ const Services = () => {
   return (
     <div className="mb-16">
       <Container>
-        <div className="mb-4 border-b border-darkGray border-opacity-50">
+        <div className="mb-4 border-b border-darkGray overflow-x-scroll scrollbar-none border-opacity-50">
           <ul className="flex">
             {tabs.map((item, index) => (
               <li
@@ -75,7 +106,7 @@ const Services = () => {
               >
                 <div className="h-8 flex items-end">
                   {item.isDisabled && (
-                    <span className="block text -xs text-center w-full text-darkGray">
+                    <span className="block w-max mx-auto text-xs text-center text-darkGray">
                       Coming Soon
                     </span>
                   )}
@@ -88,7 +119,7 @@ const Services = () => {
                 {!item.isDisabled && (
                   <div
                     className={
-                      "inline-block pb-2 pl-2 pr-4 text-xl font-semibold text-center hover:text-secondary border-b-2 hover:border-secondary transition-all duration-200 ease-in-out " +
+                      "inline-block pb-1 pl-2 pr-4 md:text-xl text-sm font-semibold text-center hover:text-secondary border-b-2 hover:border-secondary transition-colors duration-200 ease-in-out " +
                       (openTab === index
                         ? "text-secondary border-secondary"
                         : "text-primary border-transparent")
@@ -99,7 +130,7 @@ const Services = () => {
                   </div>
                 )}
                 {item.isDisabled && (
-                  <div className="inline-block pb-2 px-2 text-xl font-medium text-darkGray border-transparent text-center border-b-2 transition-all duration-200 ease-in-out">
+                  <div className="inline-block pb-1 px-2 md:text-xl text-sm font-semibold text-darkGray border-transparent text-center border-b-2 transition-colors duration-200 ease-in-out">
                     {item.title}
                   </div>
                 )}
@@ -109,18 +140,49 @@ const Services = () => {
         </div>
         <div>
           <div className={openTab === 0 ? "block" : "hidden"}>
-            <div>
-              <img src={CleaningPoster} alt="" />
+            <div className="w-full">
+              <img
+                src={CleaningPoster}
+                alt="poster-service"
+                className="w-full"
+              />
             </div>
             {/* Slider */}
-            <div className="mt-4">
-              <Slider {...settings}>
-                {sliderData.map((arr) => (
-                  <div className="pr-4 pl-0">
+            <div className="relative mt-3">
+              <Slider ref={setSliderRef} {...settings}>
+                {sliderData.map((arr, index) => (
+                  <div className="outline-none sm:pr-3 pr-2" key={index}>
                     <img src={arr.title} alt="" />
                   </div>
                 ))}
               </Slider>
+
+              {slideBack > 0 && (
+                <div
+                  className="absolute top-0 left-0 h-full w-72 bg-gradient-to-l from-transparent to-white hidden md:flex items-center justify-start pl-5"
+                  onClick={() => setSlideBack(--slideBack)}
+                >
+                  <button
+                    className=" flex justify-center items-center h-10 w-10 rounded-full bg-secondary transform -rotate-180 p-2"
+                    onClick={sliderRef?.slickPrev}
+                  >
+                    <img src={sliderArrow} alt="arrow" className="w-4" />
+                  </button>
+                </div>
+              )}
+              {slideBack < sliderData.length - showSlides && (
+                <div
+                  className="absolute top-0 right-0 h-full w-72 bg-gradient-to-r from-transparent to-white hidden md:flex items-center justify-end pr-5"
+                  onClick={() => setSlideBack(++slideBack)}
+                >
+                  <button
+                    className=" flex justify-center items-center h-10 w-10 rounded-full bg-secondary p-2"
+                    onClick={sliderRef?.slickNext}
+                  >
+                    <img src={sliderArrow} alt="arrow" className="w-4" />
+                  </button>
+                </div>
+              )}
             </div>
           </div>
           <div className={openTab === 1 ? "block" : "hidden"}>2</div>

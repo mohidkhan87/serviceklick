@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -11,14 +11,17 @@ module.exports = {
         darkGray: "#818799",
         skyBlue: "#F5F7FA",
         lightPink: "#FCECE9",
-        customGray: '#C0C3CC',
-        darkYellow: '#FCA101'
+        customGray: "#C0C3CC",
+        darkYellow: "#FCA101",
       },
       fontFamily: {
-        'sans': ['silka', ...defaultTheme.fontFamily.sans],
+        sans: ["silka", ...defaultTheme.fontFamily.sans],
       },
       borderRadius: {
-        ellipseCurve: '0 0 0 100%'
+        ellipseCurve: "0 0 0 100%",
+      },
+      boxShadow: {
+        fade: "10px 30px 150px 1px rgba(0, 0, 0, 0.20)",
       },
       backgroundImage: {
         "professional-bg":
