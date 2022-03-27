@@ -1,8 +1,12 @@
 import React from 'react'
 
+import Footer from "./../components/shared/navigation/Footer";
+
 const AboutUs = () => {
   return (
-    <div>AboutUs</div>
+    <div>
+      <Footer />
+    </div>
   )
 }
 

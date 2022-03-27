@@ -2,7 +2,7 @@ import React from 'react'
 
 import Footer from "./../components/shared/navigation/Footer";
 
-const CompletlyBusiness = () => {
+const BlogPost = () => {
   return (
     <div>
       <Footer />
@@ -10,4 +10,4 @@ const CompletlyBusiness = () => {
   )
 }
 
-export default CompletlyBusiness
+export default BlogPost

@@ -1,8 +1,12 @@
 import React from 'react'
 
+import Footer from "./../components/shared/navigation/Footer";
+
 const Categories = () => {
   return (
-    <div>Categories</div>
+    <div>
+      <Footer />
+    </div>
   )
 }
 
