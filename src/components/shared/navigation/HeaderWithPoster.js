@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 import Container from "../../ui/Container";
-import Logo from "../../../assets/images/logo.png";
+import Logo from "../../../assets/images/logo-horizontal.png";
 import Globe from "../../../assets/images/pages/homepage/globe.svg";
 import Switzerland from "../../../assets/images/pages/homepage/switzerland.svg";
 import visa from "../../../assets/images/pages/homepage/switzerland.svg";
@@ -10,6 +10,7 @@ import mastercard from "../../../assets/images/pages/homepage/mastercard.svg";
 import amex from "../../../assets/images/pages/homepage/amex.svg";
 import applePay from "../../../assets/images/pages/homepage/apple-pay.svg";
 import gpay from "../../../assets/images/pages/homepage/gpay.svg";
+import { Link } from "react-router-dom";
 
 const Header = ({ isSearching }) => {
   const [isMenu, setIsMenu] = useState(false);
@@ -87,9 +88,8 @@ const Header = ({ isSearching }) => {
 
   return (
     <div
-      className={`w-full absolute top-0 left-0 ${
-        isSearching ? "z - 20" : "z-40"
-      }`}
+      className={`w-full absolute top-0 left-0 ${isSearching ? "z - 20" : "z-40"
+        }`}
     >
       <Container>
         <div className="relative w-full flex sm:flex-row flex-row-reverse justify-between items-center py-5 text-white">
@@ -101,14 +101,20 @@ const Header = ({ isSearching }) => {
             <div className="h-1 sm:w-9 w-7 rounded-full bg-white"></div>
             <div className="h-1 sm:w-5 w-5 rounded-full bg-white"></div>
           </div>
-          <div className="flex items-center gap-3">
-            <img src={Logo} alt="logo" className="sm:w-auto w-10" />
-            <h1 className="sm:text-2xl text-xl font-bold">Serviceklick</h1>
+          <div>
+            <div>
+              <Link to="/">
+                <div className="flex items-center gap-3">
+                  <img src={Logo} alt="logo" className="w-auto h-12" />
+                  {/* <h1 className="sm:text-2xl text-xl font-bold">Serviceklick</h1> */}
+                </div>
+              </Link>
+            </div>
           </div>
           <div className="hidden sm:flex items-center gap-7">
-            <p className="hidden lg:block">How it Works</p>
-            <p className="hidden lg:block">Abouts Us</p>
-            <p className="hidden lg:block">Newsroom</p>
+            <p className="hidden lg:block"><Link to='/how-it-works'>How it Works</Link></p>
+            <p className="hidden lg:block"><Link to='/about-us'>Abouts Us</Link></p>
+            <p className="hidden lg:block"><Link to='/newsroom'>Newsroom</Link></p>
             <div className="cursor-pointer" onClick={() => toggleOptions()}>
               <img src={Globe} alt="" />
             </div>
@@ -118,13 +124,12 @@ const Header = ({ isSearching }) => {
           </div>
           {/* Mobile Nav */}
           <div
-            className={`lg:hidden flex flex-col justify-center items-center gap-2 absolute top-full left-0 w-full h-0 text-secondary bg-white font-medium rounded-lg transition-all duration-200 ease-linear overflow-hidden shadow-2xl z-30 ${
-              isMenu && "sm:h-44 h-48 p-5"
-            }`}
+            className={`lg:hidden flex flex-col justify-center items-center gap-2 absolute top-full left-0 w-full h-0 text-secondary bg-white font-medium rounded-lg transition-all duration-200 ease-linear overflow-hidden shadow-2xl z-30 ${isMenu && "sm:h-44 h-48 p-5"
+              }`}
           >
-            <p className="cursor-pointer">How it Works</p>
-            <p className="cursor-pointer">Abouts Us</p>
-            <p className="cursor-pointer">Newsroom</p>
+            <p className="cursor-pointer"><Link to='/how-it-works'>How it Works</Link></p>
+            <p className="cursor-pointer"><Link to='/about-us'>Abouts Us</Link></p>
+            <p className="cursor-pointer"><Link to='/newsroom'>Newsroom</Link></p>
             <p
               className="sm:hidden cursor-pointer"
               onClick={() => toggleOptions()}
@@ -144,22 +149,20 @@ const Header = ({ isSearching }) => {
               <div className="region-modal relative bg-lightGray rounded-lg overflow-y-scroll scrollbar-none p-6 mt-24 text-black z-20">
                 <div className="flex gap-5 border-b-2 border-darkGray border-opacity-50 w-max ">
                   <h1
-                    className={`transition duration-200 ease-linear sm:text-base text-sm sm:font-bold font-semibold -mb-0.5 cursor-pointer pb-1 ${
-                      isOption === "language"
-                        ? "border-b-2 border-secondary text-secondary"
-                        : "text-darkGray"
-                    }`}
+                    className={`transition duration-200 ease-linear sm:text-base text-sm sm:font-bold font-semibold -mb-0.5 cursor-pointer pb-1 ${isOption === "language"
+                      ? "border-b-2 border-secondary text-secondary"
+                      : "text-darkGray"
+                      }`}
                     onClick={() => setIsOption("language")}
                   >
                     Language and Region
                   </h1>
 
                   <h1
-                    className={`transition duration-200 ease-linear sm:text-base text-sm sm:font-bold font-semibold -mb-0.5 cursor-pointer pb-1 ${
-                      isOption === "payment"
-                        ? "border-b-2 border-secondary text-secondary"
-                        : "text-darkGray"
-                    }`}
+                    className={`transition duration-200 ease-linear sm:text-base text-sm sm:font-bold font-semibold -mb-0.5 cursor-pointer pb-1 ${isOption === "payment"
+                      ? "border-b-2 border-secondary text-secondary"
+                      : "text-darkGray"
+                      }`}
                     onClick={() => setIsOption("payment")}
                   >
                     Payment

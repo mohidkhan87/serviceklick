@@ -21,10 +21,10 @@ const ServiceAd = () => {
             See price estimates, read reviews and chat with pros, all in the
             app.
           </p>
-          <div className="grid grid-cols-3 gap-2">
-            <img src={PlayStore} alt="" className="w-full" />
-            <img src={AppStore} alt="" className="w-full" />
-            <img src={QrCode} alt="" className="w-full" />
+          <div className="flex flex-row flex-wrap gap-2">
+            <img src={PlayStore} alt="" className="w-40" />
+            <img src={AppStore} alt="" className="w-40" />
+            <img src={QrCode} alt="" className="w-40" />
           </div>
         </div>
         <div className="flex justify-end">
@@ -34,7 +34,7 @@ const ServiceAd = () => {
               <img
                 src={UpperAd}
                 alt="upper-img"
-                className="relative mt-7 z-10"
+                className="w-full relative mt-7 z-10"
               />
               <img
                 src={LowerAd}

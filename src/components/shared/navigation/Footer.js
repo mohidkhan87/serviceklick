@@ -127,8 +127,8 @@ const Footer = () => {
                 <li><Link to='/'><span className='hidden lg:inline-block'>&#8226;&nbsp;&nbsp;</span>Cookie Policy</Link></li>
               </ul>
             </div>
-            <div>
-              <img src={TrustPilot} alt="trust pilot" />
+            <div className='w-max'>
+              <img src={TrustPilot} alt="trust pilot" className='w-full' />
             </div>
           </div>
         </div>

@@ -147,7 +147,7 @@ const Poster = () => {
                   Popular:
                   {popularSearches.map((search, index) => (
                     <p
-                      className="flex-shrink-0 border border-white text-sm py-0.5 px-3 font-normal rounded-full"
+                      className="flex-shrink-0 border border-white text-sm py-0.5 px-3 font-normal rounded-full cursor-pointer"
                       key={index}
                     >
                       {search.name}
