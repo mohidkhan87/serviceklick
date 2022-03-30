@@ -1,13 +1,17 @@
 import React from 'react'
 
-import Footer from "./../components/shared/navigation/Footer";
+import HeaderWithSearch from '../components/shared/navigation/HeaderWithSearch'
+import Footer from '../components/shared/navigation/Footer'
 
-const BlogPost = () => {
+import Content from '../components/pages/blogPost/Content'
+const TermsAndConditions = () => {
   return (
-    <div>
+    <>
+      <HeaderWithSearch />
+      <Content />
       <Footer />
-    </div>
+    </>
   )
 }
 
-export default BlogPost
+export default TermsAndConditions
