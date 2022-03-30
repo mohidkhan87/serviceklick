@@ -13,7 +13,7 @@ const Content = () => {
     const changeCurrentActive = (val) => {
         setCurrentActive(val)
     }
-    const postData = [
+    const postsData = [
         { title: 'Getting Started with Completely', category: 'Using Completly' },
         { title: 'Providing clear job instructions', category: 'General' },
         { title: 'Get help with payments', category: 'Payments' },
@@ -72,7 +72,7 @@ const Content = () => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
                     {
-                        postData.map((item, index) =>
+                        postsData.map((item, index) =>
                             <div key={index}>
                                 <PostCard title={item.title} category={item.category} />
                             </div>

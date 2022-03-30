@@ -4,6 +4,7 @@ import { useState } from "react";
 import Container from "../../ui/Container";
 import Logo from "../../../assets/images/logo-horizontal.png";
 import Globe from "../../../assets/images/pages/homepage/globe.svg";
+import GlobeBlack from "../../../assets/images/pages/homepage/globe-black.svg";
 import Switzerland from "../../../assets/images/pages/homepage/switzerland.svg";
 import visa from "../../../assets/images/pages/homepage/switzerland.svg";
 import mastercard from "../../../assets/images/pages/homepage/mastercard.svg";
@@ -12,7 +13,7 @@ import applePay from "../../../assets/images/pages/homepage/apple-pay.svg";
 import gpay from "../../../assets/images/pages/homepage/gpay.svg";
 import { Link } from "react-router-dom";
 
-const Header = ({ isSearching }) => {
+const Header = ({ isSearching, background, textColor, isAbsolute }) => {
   const [isMenu, setIsMenu] = useState(false);
   const [showLanguages, setShowLanguages] = useState(false);
   const [isOption, setIsOption] = useState("language");
@@ -88,7 +89,7 @@ const Header = ({ isSearching }) => {
 
   return (
     <div
-      className={`w-full absolute top-0 left-0 ${isSearching ? "z - 20" : "z-40"
+      className={`w-full ${isAbsolute && "absolute top-0 left-0"} bg-${background} ${isSearching ? "z - 20" : "z-40"
         }`}
     >
       <Container>
@@ -97,9 +98,9 @@ const Header = ({ isSearching }) => {
             className="lg:hidden transform sm:rotate-0 rotate-180 flex flex-col gap-1 sm:gap-1.5"
             onClick={() => setIsMenu(!isMenu)}
           >
-            <div className="h-1 sm:w-7 w-6 rounded-full bg-white"></div>
-            <div className="h-1 sm:w-9 w-7 rounded-full bg-white"></div>
-            <div className="h-1 sm:w-5 w-5 rounded-full bg-white"></div>
+            <div className={`h-1 sm:w-7 w-6 rounded-full bg-${textColor}`}></div>
+            <div className={`h-1 sm:w-9 w-7 rounded-full bg-${textColor}`}></div>
+            <div className={`h-1 sm:w-5 w-5 rounded-full bg-${textColor}`}></div>
           </div>
           <div>
             <div>
@@ -112,13 +113,13 @@ const Header = ({ isSearching }) => {
             </div>
           </div>
           <div className="hidden sm:flex items-center gap-7">
-            <p className="hidden lg:block"><Link to='/how-it-works'>How it Works</Link></p>
-            <p className="hidden lg:block"><Link to='/about-us'>Abouts Us</Link></p>
-            <p className="hidden lg:block"><Link to='/newsroom'>Newsroom</Link></p>
+            <p className={`hidden lg:block text-${textColor}`}><Link to='/how-it-works'>How it Works</Link></p>
+            <p className={`hidden lg:block text-${textColor}`}><Link to='/about-us'>Abouts Us</Link></p>
+            <p className={`hidden lg:block text-${textColor}`}><Link to='/newsroom'>Newsroom</Link></p>
             <div className="cursor-pointer" onClick={() => toggleOptions()}>
-              <img src={Globe} alt="" />
+              <img src={background === "transparent" ? Globe : GlobeBlack} alt="" />
             </div>
-            <button className="py-2 px-6 rounded-full font-bold text-black bg-white">
+            <button className={`py-2 px-6 rounded-full font-bold ${background === "transparent" ? "text-primary bg-white" : `text-white bg-primary`}`}>
               Join
             </button>
           </div>

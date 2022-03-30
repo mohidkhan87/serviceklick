@@ -9,6 +9,7 @@ module.exports = {
         secondary: "#660019",
         lightGray: "#F5F7FA",
         darkGray: "#818799",
+        textGray: '#686868',
         skyBlue: "#F5F7FA",
         lightPink: "#FCECE9",
         customGray: "#C0C3CC",
@@ -19,6 +20,7 @@ module.exports = {
       },
       borderRadius: {
         ellipseCurve: "0 0 0 100%",
+        ellipseCurveCenter: "0 0 50% 50%",
       },
       boxShadow: {
         fade: "10px 30px 150px 1px rgba(0, 0, 0, 0.20)",

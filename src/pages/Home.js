@@ -6,7 +6,7 @@ import Services from "../components/pages/homepage/Services";
 import Satisfaction from "../components/pages/homepage/Satisfaction";
 import Benefits from "../components/pages/homepage/Benefits";
 import News from "../components/pages/homepage/News";
-import ServiceAd from "../components/pages/homepage/ServiceAd";
+import ServiceAd from "../components/shared/ServiceAd";
 import Reviews from "../components/pages/homepage/Reviews";
 
 const Home = () => {

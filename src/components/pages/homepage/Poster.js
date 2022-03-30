@@ -53,7 +53,7 @@ const Poster = () => {
         isClient === "professional" ? "bg-professional-bg" : "bg-customer-bg"
       } bg-cover bg-bottom bg-no-repeat w-full lg:pt-40 md:pb-0 pb-20 md:pt-36 pt-24`}
     >
-      <HeaderWithPoster isSearching={isSearching} />
+      <HeaderWithPoster isSearching={isSearching} background='transparent' textColor="white" isAbsolute={true} />
 
       <Container>
         <div className="grid md:grid-cols-2 grid-cols-1 xl:gap-0 gap-8 text-white">

@@ -1,12 +1,12 @@
 import React from "react";
-import PlayStore from "../../../assets/images/pages/homepage/play-store.svg";
-import AppStore from "../../../assets/images/pages/homepage/app-store.svg";
-import QrCode from "../../../assets/images/pages/homepage/qr-code.svg";
-import UpperAd from "../../../assets/images/pages/homepage/upper-ad.svg";
-import LowerAd from "../../../assets/images/pages/homepage/lower-ad.svg";
-import AdBackground from "../../../assets/images/pages/homepage/ad-bg.svg";
+import PlayStore from "../../assets/images/pages/homepage/play-store.svg";
+import AppStore from "../../assets/images/pages/homepage/app-store.svg";
+import QrCode from "../../assets/images/pages/homepage/qr-code.svg";
+import UpperAd from "../../assets/images/pages/homepage/upper-ad.svg";
+import LowerAd from "../../assets/images/pages/homepage/lower-ad.svg";
+import AdBackground from "../../assets/images/pages/homepage/ad-bg.svg";
 // import Underline from "../../../assets/images/pages/homepage/underline.svg";
-import Container from "../../ui/Container";
+import Container from "../ui/Container";
 
 const ServiceAd = () => {
   return (
