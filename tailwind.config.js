@@ -7,12 +7,17 @@ module.exports = {
       colors: {
         primary: "#2B2D33",
         secondary: "#660019",
-        lightGray: "#F5F7FA",
+        
+        // Gray
         darkGray: "#818799",
+        borderGray: "#EDEFF2",
+        footerTextGray: "#81858E",
+        lightGray: "#F5F7FA",
         textGray: '#686868',
+        customGray: "#C0C3CC",
+
         skyBlue: "#F5F7FA",
         lightPink: "#FCECE9",
-        customGray: "#C0C3CC",
         darkYellow: "#FCA101",
         gradientPink: '#F9CFC6',
         gradientBlue: '#B9D2EA'

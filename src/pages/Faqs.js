@@ -3,10 +3,10 @@ import React from 'react'
 import FaqsQuestions from '../components/pages/faqs/Faqs';
 import DiscoverBenefits from '../components/pages/faqs/DiscoverBenefits';
 import Posts from '../components/shared/Posts';
-import ServiceAd from '../components/shared/ServiceAd'
 import MarginBottom from '../components/shared/spacing/MarginBottom';
-import Footer from "./../components/shared/navigation/Footer";
 import Poster from '../components/pages/faqs/Poster';
+import ServiceAd from '../components/shared/ServiceAd'
+import Footer from "./../components/shared/navigation/Footer";
 
 const Faqs = () => {
   const postsData = [
