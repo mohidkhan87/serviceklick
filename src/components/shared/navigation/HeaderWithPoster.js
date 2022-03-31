@@ -117,9 +117,9 @@ const Header = ({ isSearching, background, textColor, isAbsolute }) => {
             <p className={`hidden lg:block text-${textColor}`}><Link to='/about-us'>Abouts Us</Link></p>
             <p className={`hidden lg:block text-${textColor}`}><Link to='/newsroom'>Newsroom</Link></p>
             <div className="cursor-pointer" onClick={() => toggleOptions()}>
-              <img src={background === "transparent" ? Globe : GlobeBlack} alt="" />
+              <img src={textColor === "white" ? Globe : GlobeBlack} alt="" />
             </div>
-            <button className={`py-2 px-6 rounded-full font-bold ${background === "transparent" ? "text-primary bg-white" : `text-white bg-primary`}`}>
+            <button className={`py-2 px-6 rounded-full font-bold ${textColor === "white" ? "text-primary bg-white" : `text-white bg-primary`}`}>
               Join
             </button>
           </div>

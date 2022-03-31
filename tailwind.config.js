@@ -14,6 +14,8 @@ module.exports = {
         lightPink: "#FCECE9",
         customGray: "#C0C3CC",
         darkYellow: "#FCA101",
+        gradientPink: '#F9CFC6',
+        gradientBlue: '#B9D2EA'
       },
       fontFamily: {
         sans: ["silka", ...defaultTheme.fontFamily.sans],
@@ -21,6 +23,7 @@ module.exports = {
       borderRadius: {
         ellipseCurve: "0 0 0 100%",
         ellipseCurveCenter: "0 0 50% 50%",
+        ellipseCurveCenterImage: "0 0 100px 10%",
       },
       boxShadow: {
         fade: "10px 30px 150px 1px rgba(0, 0, 0, 0.20)",
