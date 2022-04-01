@@ -12,8 +12,8 @@ const Mission = () => {
                     <div>
                         <img src={MissionImage} alt="Mission" className="w-full" />
                     </div>
-                    <div className="flex gap-10 bg-skyBlue">
-                        <div className="flex-1 p-10">
+                    <div className="flex flex-col xl:flex-row bg-skyBlue">
+                        <div className="flex-1 p-5 xl:p-10">
                             <h2 className="text-primary font-bold text-3xl mb-2">Mission</h2>
                             <p className="text-darkGray text-sm">
                                 Homes are complex systems that don’t come with a manual. Once
@@ -27,7 +27,7 @@ const Mission = () => {
                                 in your home, you can have true peace of mind.
                             </p>
                         </div>
-                        <div className="flex-1 p-10">
+                        <div className="flex-1 px-5 pb-5 xl:p-10">
                             <h2 className="text-primary font-bold text-3xl mb-2">Vision</h2>
                             <p className="text-darkGray text-sm">
                                 Serviceklick is for everyone. Our customers, pros, and employees

@@ -108,15 +108,15 @@ const Team = () => {
                 <h3 className="text-primary text-2xl 2xl:text-3xl mb-4 font-bold mt-16">
                     Our incredible Partners
                 </h3>
-                <div className="flex">
+                <div className="flex flex-col xl:flex-row">
                     <div className="relative flex-1">
                         <img src={VideoImage} alt="video" className="w-full" />
                         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer'>
                             <img src={PlayCircle} alt="Video Banner" className='w-16 h-16' />
                         </div>
                     </div>
-                    <div className="flex-1 bg-skyBlue py-16 px-10">
-                        <h2 className="text-primary font-bold text-2xl">
+                    <div className="flex-1 bg-skyBlue py-16 px-5 md:px-10">
+                        <h2 className="text-primary font-bold text-2xl 2xl:text-4xl 2xl:pr-10">
                             The extra jobs allowed me to become an entrepreneur and laid down
                             a path to financial freedom.
                         </h2>
