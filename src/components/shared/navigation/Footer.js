@@ -69,16 +69,16 @@ const Footer = () => {
             <h4 className="text-primary text-xl font-bold">Company</h4>
             <div className="mt-4 lg:mt-8">
               <ul>
-                <li className="text-footerTextGray text-base mt-2">
+                <li className="text-footerTextGray hover:text-secondary transition duration-300 ease-in-out text-base mt-2">
                   <Link to="/">About us</Link>
                 </li>
-                <li className="text-footerTextGray text-base mt-2">
+                <li className="text-footerTextGray hover:text-secondary transition duration-300 ease-in-out text-base mt-2">
                   <Link to="/">Learn about new features</Link>
                 </li>
-                <li className="text-footerTextGray text-base mt-2">
+                <li className="text-footerTextGray hover:text-secondary transition duration-300 ease-in-out text-base mt-2">
                   <Link to="/">Message from our founders</Link>
                 </li>
-                <li className="text-footerTextGray text-base mt-2">
+                <li className="text-footerTextGray hover:text-secondary transition duration-300 ease-in-out text-base mt-2">
                   <Link to="/">Newsroom</Link>
                 </li>
               </ul>
@@ -88,16 +88,16 @@ const Footer = () => {
             <h4 className="text-primary text-xl font-bold">Provider</h4>
             <div className="mt-4 lg:mt-8">
               <ul>
-                <li className="text-footerTextGray text-base mt-2">
+                <li className="text-footerTextGray hover:text-secondary transition duration-300 ease-in-out text-base mt-2">
                   <Link to="/">Completly for Service Providers</Link>
                 </li>
-                <li className="text-footerTextGray text-base mt-2">
+                <li className="text-footerTextGray hover:text-secondary transition duration-300 ease-in-out text-base mt-2">
                   <Link to="/">Community Guidelines</Link>
                 </li>
-                <li className="text-footerTextGray text-base mt-2">
+                <li className="text-footerTextGray hover:text-secondary transition duration-300 ease-in-out text-base mt-2">
                   <Link to="/">Providers-principles</Link>
                 </li>
-                <li className="text-footerTextGray text-base mt-2">
+                <li className="text-footerTextGray hover:text-secondary transition duration-300 ease-in-out text-base mt-2">
                   <Link to="/">Responsible service provider</Link>
                 </li>
               </ul>
@@ -107,10 +107,10 @@ const Footer = () => {
             <h4 className="text-primary text-xl font-bold">Customer's</h4>
             <div className="mt-4 lg:mt-8">
               <ul>
-                <li className="text-footerTextGray text-base mt-2">
+                <li className="text-footerTextGray hover:text-secondary transition duration-300 ease-in-out text-base mt-2">
                   <Link to="/">How to use completly</Link>
                 </li>
-                <li className="text-footerTextGray text-base mt-2">
+                <li className="text-footerTextGray hover:text-secondary transition duration-300 ease-in-out text-base mt-2">
                   <Link to="/">Community Guidelines</Link>
                 </li>
               </ul>
@@ -120,10 +120,10 @@ const Footer = () => {
             <h4 className="text-primary text-xl font-bold">Community</h4>
             <div className="mt-4 lg:mt-8">
               <ul>
-                <li className="text-footerTextGray text-base mt-2">
+                <li className="text-footerTextGray hover:text-secondary transition duration-300 ease-in-out text-base mt-2">
                   <Link to="/">Against discrimination</Link>
                 </li>
-                <li className="text-footerTextGray text-base mt-2">
+                <li className="text-footerTextGray hover:text-secondary transition duration-300 ease-in-out text-base mt-2">
                   <Link to="/">Fightblackmarket</Link>
                 </li>
               </ul>
@@ -133,16 +133,16 @@ const Footer = () => {
             <h4 className="text-primary text-xl font-bold">Support</h4>
             <div className="mt-4 lg:mt-8">
               <ul>
-                <li className="text-footerTextGray text-base mt-2">
+                <li className="text-footerTextGray hover:text-secondary transition duration-300 ease-in-out text-base mt-2">
                   <Link to="/">Help Center</Link>
                 </li>
-                <li className="text-footerTextGray text-base mt-2">
+                <li className="text-footerTextGray hover:text-secondary transition duration-300 ease-in-out text-base mt-2">
                   <Link to="/">Safety information</Link>
                 </li>
-                <li className="text-footerTextGray text-base mt-2">
+                <li className="text-footerTextGray hover:text-secondary transition duration-300 ease-in-out text-base mt-2">
                   <Link to="/">Cancellation options</Link>
                 </li>
-                <li className="text-footerTextGray text-base mt-2">
+                <li className="text-footerTextGray hover:text-secondary transition duration-300 ease-in-out text-base mt-2">
                   <Link to="/">Our COVID-19 Response</Link>
                 </li>
               </ul>
@@ -167,10 +167,10 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row justify-between  gap-5 lg:gap-0 mt-8">
             <div>
               <ul className="flex flex-col lg:flex-row gap-2 lg:gap-4 text-footerTextGray">
-                <li>
+                <li className="hover:text-secondary transition duration-300 ease-in-out">
                   <Link to="/">Terms and Conditions</Link>
                 </li>
-                <li>
+                <li className="hover:text-secondary transition duration-300 ease-in-out">
                   <Link to="/">
                     <span className="hidden lg:inline-block">
                       &#8226;&nbsp;&nbsp;
@@ -178,7 +178,7 @@ const Footer = () => {
                     Privacy policy
                   </Link>
                 </li>
-                <li>
+                <li className="hover:text-secondary transition duration-300 ease-in-out">
                   <Link to="/">
                     <span className="hidden lg:inline-block">
                       &#8226;&nbsp;&nbsp;
@@ -186,7 +186,7 @@ const Footer = () => {
                     Impressum
                   </Link>
                 </li>
-                <li>
+                <li className="hover:text-secondary transition duration-300 ease-in-out">
                   <Link to="/">
                     <span className="hidden lg:inline-block">
                       &#8226;&nbsp;&nbsp;

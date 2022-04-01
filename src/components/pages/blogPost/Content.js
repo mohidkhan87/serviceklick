@@ -20,14 +20,14 @@ const Content = () => {
         { title: 'Manage your account', category: 'Using Completly' },
     ];
     return (
-        <div>
+        <div className="border-t border-borderGray">
             <Container>
                 <div className="mt-4">
                     <p className="text-base text-primary">
                         <span className="inline-block font-bold pb-px border-b border-darkGray"><Link to='/'>Home</Link></span> <span className="font-light">/ Terms</span>
                     </p>
                 </div>
-                <div className="flex gap-8 2xl:gap-16 mb-10">
+                <div className="flex gap-8 2xl:gap-16 mb-16">
                     <div className="hidden lg:block w-60 2xl:w-72 bg-white sticky top-0 h-max pt-10">
                         <Nav currentActive={currentActive} changeCurrentActive={changeCurrentActive} />
                     </div>

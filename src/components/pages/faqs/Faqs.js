@@ -49,20 +49,20 @@ const Faqs = () => {
     }
 
     return (
-        <div>
+        <section>
             <Container>
-                <div className="flex flex-row flex-wrap gap-5 mb-5">
+                <div className="flex flex-row flex-wrap gap-2 mb-5">
                     <div>
-                        <button className="bg-primary text-white px-4 py-2 border border-primary hover:text-white hover:bg-primary rounded-full cursor-pointer text-xs transition-colors duration-200 ease-in-out">Payment</button>
+                        <button className="bg-primary text-white px-4 py-2 border-2 border-transparent hover:text-white hover:bg-primary hover:border-primary rounded-full cursor-pointer text-xs transition-colors duration-300 ease-in-out">Payment</button>
                     </div>
                     <div>
-                        <button className="bg-white text-primary px-4 py-2 border border-primary hover:text-white hover:bg-primary rounded-full cursor-pointer text-xs transition-colors duration-200 ease-in-out">Cancellation</button>
+                        <button className="bg-white text-primary px-4 py-2 border-2 border-darkGray hover:text-white hover:bg-primary hover:border-primary rounded-full cursor-pointer text-xs transition-colors duration-300 ease-in-out">Cancellation</button>
                     </div>
                     <div>
-                        <button className="bg-white text-primary px-4 py-2 border border-primary hover:text-white hover:bg-primary rounded-full cursor-pointer text-xs transition-colors duration-200 ease-in-out">Chef</button>
+                        <button className="bg-white text-primary px-4 py-2 border-2 border-darkGray hover:text-white hover:bg-primary hover:border-primary rounded-full cursor-pointer text-xs transition-colors duration-300 ease-in-out">Chef</button>
                     </div>
                     <div>
-                        <button className="bg-white text-primary px-4 py-2 border border-primary hover:text-white hover:bg-primary rounded-full cursor-pointer text-xs transition-colors duration-200 ease-in-out">Payment</button>
+                        <button className="bg-white text-primary px-4 py-2 border-2 border-darkGray hover:text-white hover:bg-primary hover:border-primary rounded-full cursor-pointer text-xs transition-colors duration-300 ease-in-out">Payment</button>
                     </div>
                 </div>
                 <h2 className="text-primary text-3xl 2xl:text-4xl font-bold mb-8">
@@ -129,7 +129,7 @@ const Faqs = () => {
                     </div>
                 </div>
             </Container>
-        </div>
+        </section>
     );
 };
 

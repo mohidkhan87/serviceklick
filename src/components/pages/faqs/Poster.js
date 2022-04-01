@@ -5,28 +5,31 @@ import Container from '../../ui/Container'
 
 const Poster = () => {
     return (
-        <div className='relative'>
-            <HeaderWithPoster background="white" textColor="primary" isAbsolute={false} />
+        <section className='relative'>
+            <div className='relative z-30'>
+                <HeaderWithPoster background="white" textColor="primary" isAbsolute={false} />
+            </div>
             <div className='border-t py-1 z-20'>
                 <Container>
-                    <div className="flex flex-row flex-wrap gap-5">
+                    <div className="flex flex-row flex-wrap gap-2">
                         <div>
-                            <button className="bg-primary text-white px-4 py-2 border border-primary hover:text-white hover:bg-primary rounded-full cursor-pointer text-xs transition-colors duration-200 ease-in-out">Payment</button>
+                            <button className="bg-primary text-white px-2.5 sm:px-4 py-2 border border-primary hover:text-white hover:bg-primary rounded-full cursor-pointer text-xs transition-colors duration-200 ease-in-out">Payment</button>
                         </div>
                         <div>
-                            <button className="bg-white text-darkGray px-4 py-2 cursor-pointer text-xs transition-colors duration-200 ease-in-out">Cancellation</button>
+                            <button className="bg-white text-darkGray px-2.5 sm:px-4 py-2 cursor-pointer text-xs transition-colors duration-200 ease-in-out">Cancellation</button>
                         </div>
                         <div>
-                            <button className="bg-white text-darkGray px-4 py-2 cursor-pointer text-xs transition-colors duration-200 ease-in-out">Chef</button>
+                            <button className="bg-white text-darkGray px-2.5 sm:px-4 py-2 cursor-pointer text-xs transition-colors duration-200 ease-in-out">Chef</button>
                         </div>
                         <div>
-                            <button className="bg-white text-darkGray px-4 py-2 cursor-pointer text-xs transition-colors duration-200 ease-in-out">Payment</button>
+                            <button className="bg-white text-darkGray px-2.5 sm:px-4 py-2 cursor-pointer text-xs transition-colors duration-200 ease-in-out">Payment</button>
                         </div>
                     </div>
                 </Container>
             </div>
             <div className='relative'>
-                <div className='lg:block w-full rounded-ellipseCurveCenter bg-lightPink py-20 z-10'>
+                <div className='lg:block w-full rounded-ellipseCurveCenter bg-gradient-to-b from-gradientPink to-gradientBlue py-20 z-10 relative'>
+                    <div className='absolute w-full h-full bg-white top-0 left-0 bg-opacity-40'></div>
                     <h1 className='text-primary text-3xl font-bold text-center'>How can we help</h1>
                     <div className='flex justify-center mt-5'>
                         <div className='border h-full rounded-3xl mx-8 md:mx-0 py-1 pl-4 pr-1 w-full md:w-96 bg-white'>
@@ -38,7 +41,7 @@ const Poster = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

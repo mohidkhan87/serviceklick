@@ -10,7 +10,7 @@ const Content = () => {
         setCurrentActive(val)
     }
     return (
-        <div>
+        <div className="border-t border-borderGray">
             <Container>
                 <div className="mt-4">
                     <p className="text-base text-primary">
