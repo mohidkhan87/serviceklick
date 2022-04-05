@@ -20,7 +20,8 @@ module.exports = {
         lightPink: "#FCECE9",
         darkYellow: "#FCA101",
         gradientPink: '#F9CFC6',
-        gradientBlue: '#B9D2EA'
+        gradientBlue: '#B9D2EA',
+        textRed: '#E52322'
       },
       fontFamily: {
         sans: ["silka", ...defaultTheme.fontFamily.sans],
