@@ -42,30 +42,64 @@ const Poster = () => {
       title: "Airbnb Cleaning",
     },
   ];
-  const backgroundColors = ['bg-pinkBlueGradient', 'bg-magentaGradient', 'bg-greenGradient', 'bg-orangeGradient', 'bg-pinkGradient'];
-  const backgroundImages = [PosterImage, PosterImage, PosterImage, PosterImage, PosterImage];
+  const backgroundColors = [
+    "bg-pinkBlueGradient",
+    "bg-magentaGradient",
+    "bg-greenGradient",
+    "bg-orangeGradient",
+    "bg-pinkGradient",
+  ];
+  const backgroundImages = [
+    PosterImage,
+    PosterImage,
+    PosterImage,
+    PosterImage,
+    PosterImage,
+  ];
   const [isClient, setIsClient] = useState("professional");
   const [isSearching, setIsSearching] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  
+
   useEffect(() => {
     const intervalId = setInterval(() => {
-        if(currentIndex === backgroundColors.length - 1) {
-          setCurrentIndex(0);
-        }else {
-          setCurrentIndex(currentIndex + 1);
-        }
-    }, 7000)
+      if (currentIndex === backgroundColors.length - 1) {
+        setCurrentIndex(0);
+      } else {
+        setCurrentIndex(currentIndex + 1);
+      }
+    }, 7000);
     return () => clearInterval(intervalId);
-  }, [backgroundColors.length, currentIndex])
+  }, [backgroundColors.length, currentIndex]);
 
   return (
     <div
       className={`${
-        isClient === "professional" ? `${backgroundColors[currentIndex]}` : "bg-customer-bg"
-      } bg-cover bg-bottom bg-no-repeat w-full lg:pt-40 md:pb-0 pb-20 md:pt-36 pt-24`}
+        isClient === "professional"
+          ? `${backgroundColors[currentIndex]}`
+          : "bg-lightBlue"
+      } relative bg-cover bg-bottom bg-no-repeat w-full lg:pt-40 md:pb-0 pb-20 md:pt-36 pt-24`}
     >
-      <HeaderWithPoster isSearching={isSearching} background='transparent' textColor="white" isAbsolute={true} />
+      <div className="custom-shape-divider-bottom-1649353383 transform md:translate-y-1.5 translate-y-px">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="xl:h-32 lg:h-28 md:h-16 h-10"
+        >
+          <path
+            d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+
+      <HeaderWithPoster
+        isSearching={isSearching}
+        background="transparent"
+        textColor="white"
+        isAbsolute={true}
+      />
 
       <Container>
         <div className="grid md:grid-cols-2 grid-cols-1 xl:gap-0 gap-8 text-white">
@@ -97,11 +131,11 @@ const Poster = () => {
             </div>
             <div className="my-5">
               {isClient === "professional" ? (
-                <h1 className="2xl:text-6xl xl:text-5xl lg:text-4xl sm:text-3xl text-2xl font-bold">
+                <h1 className="2xl:text-6xl xl:text-5xl lg:text-4xl text-2xl font-bold">
                   Find local Professionals for pretty much anything.
                 </h1>
               ) : (
-                <h1 className="2xl:text-6xl xl:text-5xl lg:text-4xl sm:text-3xl text-2xl font-bold">
+                <h1 className="2xl:text-6xl xl:text-5xl lg:text-4xl text-2xl font-bold">
                   Find local customers and start earning today with Completely.
                 </h1>
               )}
@@ -179,12 +213,16 @@ const Poster = () => {
               </>
             )}
           </div>
-          <div className=" pb-px hidden md:flex justify-end overflow-hidden">
+          <div className=" hidden md:flex justify-end overflow-hidden">
             <img
-              src={isClient === "professional" ? backgroundImages[currentIndex] : CustomerImage}
+              src={
+                isClient === "professional"
+                  ? backgroundImages[currentIndex]
+                  : CustomerImage
+              }
               alt="poster"
               style={{ width: "450px" }}
-              className="rounded-b-3xl "
+              className="rounded-b-3xl transform -translate-x-3.5"
             />
           </div>
         </div>
