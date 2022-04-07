@@ -10,6 +10,7 @@ import Satisfaction from "../components/pages/homepage/Satisfaction";
 import Benefits from "../components/pages/homepage/Benefits";
 import News from "../components/pages/homepage/News";
 import Reviews from "../components/pages/homepage/Reviews";
+import ReviewPlatform from "../components/pages/homepage/ReviewPlatform";
 import Footer from "./../components/shared/navigation/Footer";
 
 const Home = () => {
@@ -26,6 +27,8 @@ const Home = () => {
       <Benefits />
       <News />
       <Reviews />
+      <ReviewPlatform />
+      <MarginBottom margin={16} />
       <Footer />
     </div>
   );
