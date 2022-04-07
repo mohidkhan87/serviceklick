@@ -1,17 +1,33 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import Container from "../../ui/Container";
 import LanguageCurrency from "./modal/LanguageCurrency";
 
 import Logo from "../../../assets/images/logo.png";
+import LogoWhite from "../../../assets/images/logo-white.png";
 import Globe from "../../../assets/images/pages/homepage/globe.svg";
 import GlobeBlack from "../../../assets/images/pages/homepage/globe-black.svg";
 
 const Header = ({ isSearching, background, textColor, isAbsolute }) => {
   const [isMenu, setIsMenu] = useState(false);
   const [showLanguages, setShowLanguages] = useState(false);
+  const [scrollingUp, setScrollingUp] = useState(false)
+  
+  let prevScroll = window.pageYOffset
+  const handleScroll = () => {
+    const currScroll = window.pageYOffset
+    const isScrolled = prevScroll > currScroll
+    setScrollingUp(isScrolled)
+    prevScroll = currScroll
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [])
 
   const toggleOptions = () => {
     setIsMenu(false);
@@ -24,7 +40,7 @@ const Header = ({ isSearching, background, textColor, isAbsolute }) => {
 
   return (
     <div
-      className={`w-full ${isAbsolute && "absolute top-0 left-0"} bg-${background} ${isSearching ? "z-20" : "z-40"
+      className={`w-full ${isAbsolute && "absolute top-0 left-0"}  ${!scrollingUp && !isAbsolute ? 'fixed border-b-2' : ''} bg-${background} ${isSearching ? "z-20" : "z-40"
         }`}
     >
       <Container>
@@ -41,7 +57,7 @@ const Header = ({ isSearching, background, textColor, isAbsolute }) => {
             <div>
               <Link to="/">
                 <div className="flex items-center gap-3">
-                  <img src={Logo} alt="logo" className="w-auto h-12" />
+                  <img src={!isAbsolute ? Logo:LogoWhite} alt="logo" className="w-auto h-12" />
                   {/* <h1 className="sm:text-2xl text-xl font-bold">Serviceklick</h1> */}
                 </div>
               </Link>
