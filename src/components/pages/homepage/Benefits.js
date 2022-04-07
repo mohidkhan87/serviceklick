@@ -63,10 +63,10 @@ const Benefits = () => {
           Serviceklick the service platform - known from the media
         </h3>
         <div className="flex items-center sm:justify-start justify-center flex-col sm:flex-row gap-4 mt-3">
-          <div className="shadow rounded-xl overflow-hidden px-3">
+          <div className="overflow-hidden px-3">
             <img src={Nau} alt="media" />
           </div>
-          <div className="shadow rounded-xl overflow-hidden px-3">
+          <div className="overflow-hidden px-3">
             <img src={Jung} alt="media" />
           </div>
         </div>

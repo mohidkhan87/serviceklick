@@ -101,9 +101,7 @@ const Services = () => {
           <ul className="flex">
             {tabs.map((item, index) => (
               <li
-                className={
-                  !item.isDisabled ? "cursor-pointer" : "cursor-not-allowed"
-                }
+                className="cursor-pointer"
                 key={index}
               >
                 <div className="h-8 flex items-end">
@@ -132,7 +130,13 @@ const Services = () => {
                   </div>
                 )}
                 {item.isDisabled && (
-                  <div className="inline-block pb-1 px-2 md:text-xl text-sm font-semibold text-darkGray border-transparent text-center border-b-2 transition-colors duration-200 ease-in-out">
+                  <div 
+                    className={"inline-block pb-1 px-2 md:text-xl text-sm font-semibold text-darkGray text-center border-b-2 transition-colors duration-200 ease-in-out " + 
+                    (openTab === index
+                      ? "border-secondary"
+                      : "border-transparent")
+                    }
+                    onClick={() => handleTab(index)}>
                     {item.title}
                   </div>
                 )}
