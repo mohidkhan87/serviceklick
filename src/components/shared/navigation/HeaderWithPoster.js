@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Container from "../../ui/Container";
 import LanguageCurrency from "./modal/LanguageCurrency";
 
-import Logo from "../../../assets/images/logo-horizontal.png";
+import Logo from "../../../assets/images/logo.png";
 import Globe from "../../../assets/images/pages/homepage/globe.svg";
 import GlobeBlack from "../../../assets/images/pages/homepage/globe-black.svg";
 
@@ -24,7 +24,7 @@ const Header = ({ isSearching, background, textColor, isAbsolute }) => {
 
   return (
     <div
-      className={`w-full ${isAbsolute && "absolute top-0 left-0"} bg-${background} ${isSearching ? "z - 20" : "z-40"
+      className={`w-full ${isAbsolute && "absolute top-0 left-0"} bg-${background} ${isSearching ? "z-20" : "z-40"
         }`}
     >
       <Container>

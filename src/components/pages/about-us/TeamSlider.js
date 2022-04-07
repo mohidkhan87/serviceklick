@@ -24,7 +24,7 @@ const TeamSlider = () => {
         dots: false,
         infinite: false,
         speed: 500,
-        swipe: false,
+        swipe: true,
         slidesToShow: showSlides,
         slidesToScroll: 1,
         responsive: [

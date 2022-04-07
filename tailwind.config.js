@@ -21,7 +21,7 @@ module.exports = {
         darkYellow: "#FCA101",
         gradientPink: '#F9CFC6',
         gradientBlue: '#B9D2EA',
-        textRed: '#E52322'
+        textRed: '#E52322',
       },
       fontFamily: {
         sans: ["silka", ...defaultTheme.fontFamily.sans],
@@ -30,15 +30,20 @@ module.exports = {
         ellipseCurve: "0 0 0 100%",
         ellipseCurveCenter: "0 0 50% 50%",
         ellipseCurveCenterImage: "0 0 100px 10%",
+        homepageBannerCurve: "0 0 0 20%",
       },
       boxShadow: {
         fade: "10px 30px 150px 1px rgba(0, 0, 0, 0.20)",
       },
       backgroundImage: {
-        "professional-bg":
-          "url('/src/assets/images/pages/homepage/professional-bg.svg')",
         "customer-bg":
           "url('/src/assets/images/pages/homepage/customer-bg.svg')",
+        'pinkBlueGradient': "linear-gradient(0deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)), linear-gradient(167.96deg, #F9CFC6 0%, #B9D2EA 100%)",
+        'magentaGradient': "linear-gradient(0deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)), linear-gradient(167.96deg, #660019 0%, #660019 100%)",
+        'greenGradient': "linear-gradient(0deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)), linear-gradient(167.96deg, #2F4121 0%, #2F4121 100%)",
+        'orangeGradient': "linear-gradient(0deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)), linear-gradient(167.96deg, #B33F0E 0%, #B33F0E 100%)",
+        'pinkGradient': "linear-gradient(0deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)), linear-gradient(167.96deg, #B11842 0%, #B11842 100%)",
+
       },
     },
   },
