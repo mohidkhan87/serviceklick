@@ -6,7 +6,7 @@ import BannerImage from '../../../assets/images/pages/newsroom/banner-image.png'
 
 const Banner = () => {
     return (
-        <div className='mt-16'>
+        <div>
             <Container>
                 <div className='flex bg-darkYellow'>
                     <div className='flex-1'>

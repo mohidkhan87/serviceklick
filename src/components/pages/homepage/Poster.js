@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import HeaderWithPoster from "../../shared/navigation/HeaderWithPoster";
 
 import Container from "../../ui/Container";
@@ -10,9 +10,6 @@ import ArrowRight from "../../../assets/images/pages/homepage/arrow-right.svg";
 import Service from "../../../assets/images/pages/homepage/service.svg";
 
 const Poster = () => {
-  const [isClient, setIsClient] = useState("professional");
-  const [isSearching, setIsSearching] = useState(false);
-  // Mock API's
   const popularSearches = [
     {
       id: 1,
@@ -45,15 +42,30 @@ const Poster = () => {
       title: "Airbnb Cleaning",
     },
   ];
-  // ____________________________________________________
+  const backgroundColors = ['bg-pinkBlueGradient', 'bg-magentaGradient', 'bg-greenGradient', 'bg-orangeGradient', 'bg-pinkGradient'];
+  const backgroundImages = [PosterImage, PosterImage, PosterImage, PosterImage, PosterImage];
+  const [isClient, setIsClient] = useState("professional");
+  const [isSearching, setIsSearching] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+        if(currentIndex === backgroundColors.length - 1) {
+          setCurrentIndex(0);
+        }else {
+          setCurrentIndex(currentIndex + 1);
+        }
+    }, 7000)
+    return () => clearInterval(intervalId);
+  }, [backgroundColors.length, currentIndex])
 
   return (
     <div
-      className={` ${
-        isClient === "professional" ? "bg-professional-bg" : "bg-customer-bg"
+      className={`${
+        isClient === "professional" ? `${backgroundColors[currentIndex]}` : "bg-customer-bg"
       } bg-cover bg-bottom bg-no-repeat w-full lg:pt-40 md:pb-0 pb-20 md:pt-36 pt-24`}
     >
-      <HeaderWithPoster isSearching={isSearching} />
+      <HeaderWithPoster isSearching={isSearching} background='transparent' textColor="white" isAbsolute={true} />
 
       <Container>
         <div className="grid md:grid-cols-2 grid-cols-1 xl:gap-0 gap-8 text-white">
@@ -147,7 +159,7 @@ const Poster = () => {
                   Popular:
                   {popularSearches.map((search, index) => (
                     <p
-                      className="flex-shrink-0 border border-white text-sm py-0.5 px-3 font-normal rounded-full"
+                      className="flex-shrink-0 border border-white text-sm py-0.5 px-3 font-normal rounded-full cursor-pointer"
                       key={index}
                     >
                       {search.name}
@@ -169,7 +181,7 @@ const Poster = () => {
           </div>
           <div className=" pb-px hidden md:flex justify-end overflow-hidden">
             <img
-              src={isClient === "professional" ? PosterImage : CustomerImage}
+              src={isClient === "professional" ? backgroundImages[currentIndex] : CustomerImage}
               alt="poster"
               style={{ width: "450px" }}
               className="rounded-b-3xl "
@@ -178,7 +190,7 @@ const Poster = () => {
         </div>
         {isSearching && (
           <div
-            className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 z-40"
+            className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 z-20"
             onClick={() => setIsSearching(false)}
           ></div>
         )}

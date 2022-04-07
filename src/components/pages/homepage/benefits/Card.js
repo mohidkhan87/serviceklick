@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import BenefitImage from "../../../../assets/images/pages/homepage/benefit.png";
 import TickCircle from "../../../../assets/images/pages/homepage/tick-circle.svg";
 
@@ -22,9 +23,11 @@ const Card = (props) => {
           <img src={BenefitImage} alt="benefit" className="w-full" />
         </div>
         <div className="mt-4">
-          <p className="text-primary md:text-lg font-semibold md:leading-5">
-            Professional and qualified employees
-          </p>
+          <Link to="/">
+            <p className="text-primary md:text-lg font-semibold md:leading-5">
+              Professional and qualified employees
+            </p>
+          </Link>
         </div>
         <div className="mt-2">{content}</div>
       </div>

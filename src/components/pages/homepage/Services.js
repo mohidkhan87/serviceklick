@@ -1,5 +1,7 @@
 import { useState } from "react";
 import React from "react";
+import { Link } from "react-router-dom";
+
 import Container from "../../ui/Container";
 import CleaningPoster from "../../../assets/images/pages/homepage/cleaning-poster.svg";
 import sliderArrow from "../../../assets/images/pages/homepage/slider/slider-arrow.svg";
@@ -33,7 +35,7 @@ const Services = () => {
     dots: false,
     infinite: false,
     speed: 500,
-    swipe: false,
+    swipe: true,
     slidesToShow: showSlides,
     slidesToScroll: 1,
     responsive: [
@@ -152,7 +154,9 @@ const Services = () => {
               <Slider ref={setSliderRef} {...settings}>
                 {sliderData.map((arr, index) => (
                   <div className="outline-none sm:pr-3 pr-2" key={index}>
-                    <img src={arr.title} alt="" />
+                    <Link to='/'>
+                      <img src={arr.title} alt="" />
+                    </Link>
                   </div>
                 ))}
               </Slider>
