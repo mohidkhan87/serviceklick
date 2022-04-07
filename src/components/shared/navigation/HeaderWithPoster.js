@@ -7,7 +7,6 @@ import LanguageCurrency from "./modal/LanguageCurrency";
 
 import Logo from "../../../assets/images/logo.png";
 import LogoWhite from "../../../assets/images/logo-white.png";
-import LogoColored from "../../../assets/images/logo-colored.png";
 import Globe from "../../../assets/images/pages/homepage/globe.svg";
 import GlobeBlack from "../../../assets/images/pages/homepage/globe-black.svg";
 
@@ -41,7 +40,7 @@ const Header = ({ isSearching, background, textColor, isAbsolute }) => {
 
   return (
     <div
-      className={`w-full ${isAbsolute && scrollingUp ? "absolute top-0 left-0" : 'fixed top-0'} ${isAbsolute && !scrollingUp && "bg-primary"} ${!scrollingUp && !isAbsolute ? 'fixed border-b-2' : ''} bg-${background} ${isSearching ? "z-20" : "z-40"
+      className={`w-full ${isAbsolute && "absolute top-0 left-0"}  ${!scrollingUp && !isAbsolute ? 'fixed border-b-2' : ''} bg-${background} ${isSearching ? "z-20" : "z-40"
         }`}
     >
       <Container>
