@@ -61,7 +61,7 @@ const Poster = () => {
 
   return (
     <div
-      className={`rounded-homepageBannerCurve ${
+      className={`${
         isClient === "professional" ? `${backgroundColors[currentIndex]}` : "bg-customer-bg"
       } bg-cover bg-bottom bg-no-repeat w-full lg:pt-40 md:pb-0 pb-20 md:pt-36 pt-24`}
     >
