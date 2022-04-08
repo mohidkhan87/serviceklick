@@ -50,16 +50,29 @@
   width: 420px;
 }
 
+/* .profile-img:hover .border-img {
+  display: block;
+} */
+
 /* Region and payment modal */
+
 .region-modal {
   width: 95%;
   max-width: 700px;
   max-height: 500px;
 }
 
-/*  */
-/*  */
-/*  */
+/* QR Code Modal */
+.QR-code_modal,
+.QR-code_modal {
+  width: 95%;
+  max-width: 700px;
+}
+
+/* ****************************************************** */
+/*                    Poster Curve Layer                  */
+/* ****************************************************** */
+
 .custom-shape-divider-bottom-1649353383 {
   position: absolute;
   bottom: 0;
