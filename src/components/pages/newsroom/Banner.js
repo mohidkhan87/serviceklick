@@ -8,7 +8,7 @@ const Banner = () => {
     return (
         <div>
             <Container>
-                <div className='flex bg-darkYellow'>
+                <div className='flex bg-darkYellow rounded-lg'>
                     <div className='flex-1'>
                         <div className='flex flex-col justify-center items-center h-full w-2/3 mx-auto py-16'>
                             <h3 className='text-primary font-bold text-3xl'>
@@ -21,7 +21,7 @@ const Banner = () => {
                     </div>
                     <div className='flex-1 hidden xl:flex'>
                         <div>
-                            <img src={BannerImage} alt="banner-post" />
+                            <img src={BannerImage} alt="banner-post" className='rounded-r-lg' />
                         </div>
                     </div>
                 </div>

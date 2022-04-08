@@ -27,6 +27,9 @@ module.exports = {
       fontFamily: {
         sans: ["silka", ...defaultTheme.fontFamily.sans],
       },
+      fontSize: {
+        'xxs': '9px',
+      },
       borderRadius: {
         ellipseCurve: "0 0 0 100%",
         ellipseCurveCenter: "0 0 50% 50%",

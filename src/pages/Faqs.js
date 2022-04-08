@@ -24,7 +24,7 @@ const Faqs = () => {
       <DiscoverBenefits title="Discover the Benefits of Completely" description="A world-leading platform for professionals." />
       <MarginBottom margin={16} />
       <Posts title="More Help articles" postsData={postsData} postsPerRow={4} />
-      <MarginBottom margin={16} />
+      <MarginBottom margin={24} />
       <ServiceAd />
       <MarginBottom margin={16} />
       <Footer />

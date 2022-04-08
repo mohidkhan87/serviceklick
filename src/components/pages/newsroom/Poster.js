@@ -15,7 +15,7 @@ const Poster = () => {
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-4">
           <div className="col-span-1 md:col-span-2 flex items-center">
-            <div className="pt-10">
+            <div>
               <p className="text-darkGray text-xs font-medium">
                 February 24, 2022
               </p>

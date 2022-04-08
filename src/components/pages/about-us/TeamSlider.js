@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 import Container from '../../ui/Container'
 
 import Image1 from "../../../assets/images/pages/about-us/team-1.png";
-import Image2 from "../../../assets/images/pages/about-us/team-1.png";
-import Image3 from "../../../assets/images/pages/about-us/team-1.png";
+import Image2 from "../../../assets/images/pages/about-us/team-2.png";
+import Image3 from "../../../assets/images/pages/about-us/team-3.png";
 import sliderArrow from "../../../assets/images/pages/homepage/slider/slider-arrow.svg";
 
 
@@ -56,32 +56,34 @@ const TeamSlider = () => {
     const sliderData = [
         {
             id: 1,
-            title: Image1,
+            img: Image1,
+            name: 'Sandro Clemente',
+            position: 'CEO & Co-Founder'
         },
         {
             id: 2,
-            title: Image2,
+            img: Image2,
+            name: 'Flavio Dias',
+            position: 'CFO & Co-Founder'
         },
         {
             id: 3,
-            title: Image3,
+            img: Image3,
+            name: 'Caterina Fadda',
+            position: 'Customer Care'
         },
         {
             id: 4,
-            title: Image1,
+            img: Image2,
+            name: 'Paula Martins',
+            position: 'Product Manager'
         },
         {
             id: 5,
-            title: Image2,
-        },
-        {
-            id: 6,
-            title: Image3,
-        },
-        {
-            id: 7,
-            title: Image1,
-        },
+            img: Image3,
+            name: 'Caterina Fadda',
+            position: 'Customer Care'
+        }
     ];
 
     return (
@@ -94,13 +96,13 @@ const TeamSlider = () => {
                         {sliderData.map((arr, index) => (
                             <div className="outline-none sm:pr-3 pr-2" key={index}>
                                 <Link to='/about-us'>
-                                    <img src={arr.title} alt="w-full" />
+                                    <img src={arr.img} alt="w-full" />
                                 </Link>
-                                <h2 className='text-primary font-bold mt-2'>
-                                    Sandro Clemente
+                                <h2 className='text-primary text-xl font-bold mt-2'>
+                                    {arr.name}
                                 </h2>
-                                <p className='text-darkGray'>
-                                    CEO &amp; Co-Founder
+                                <p className='text-darkGray mt-1'>
+                                    {arr.position}
                                 </p>
                             </div>
                         ))}

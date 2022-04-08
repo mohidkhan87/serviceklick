@@ -19,6 +19,8 @@ const Posts = (props) => {
                                 title={item.title}
                                 category={item.category}
                                 date={item.date}
+                                image={item.image}
+                                by={item.by}
                             />
                         </div>
                     ))}

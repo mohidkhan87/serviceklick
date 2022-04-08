@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import Container from "../../ui/Container";
-import PostCard from "../../../components/shared/cards/PostCard";
+import CustomModalVideo from '../../shared/CustomModalVideo'
+
+import BlogPost1 from '../../../assets/images/pages/help-center/blog-post-1.png'
+import BlogPost2 from '../../../assets/images/pages/help-center/blog-post-2.png'
 
 import Post1 from "../../../assets/images/pages/help-center/post-1.png";
 import Post2 from "../../../assets/images/pages/help-center/post-2.png";
@@ -10,7 +14,10 @@ import PlayCircle from "../../../assets/images/shared/play-circle.svg";
 
 const HowToUse = () => {
     const [isClient, setIsClient] = useState("buyers");
-
+    const [isOpen, setOpen] = useState(false)
+    const handleOpen = () => {
+        setOpen(!isOpen)
+    }
     return (
         <div>
             <Container>
@@ -18,8 +25,8 @@ const HowToUse = () => {
                     <div className="border-b-2 border-darkGray w-max mb-16">
                         <h1
                             className={`inline-block mr-2 transition duration-200 ease-linear sm:text-base text-sm sm:font-bold font-semibold -mb-0.5 cursor-pointer pb-2 ${isClient === "buyers"
-                                    ? "text-secondary border-secondary border-b-2"
-                                    : "opacity-60"
+                                ? "text-secondary border-secondary border-b-2"
+                                : "opacity-60"
                                 }`}
                             onClick={() => setIsClient("buyers")}
                         >
@@ -28,8 +35,8 @@ const HowToUse = () => {
 
                         <h1
                             className={`inline-block ml-2 transition duration-200 ease-linear sm:text-base text-sm sm:font-bold font-semibold -mb-0.5 cursor-pointer pb-2 ${isClient === "sellers"
-                                    ? "text-secondary border-secondary border-b-2"
-                                    : "opacity-60"
+                                ? "text-secondary border-secondary border-b-2"
+                                : "opacity-60"
                                 }`}
                             onClick={() => setIsClient("sellers")}
                         >
@@ -62,37 +69,90 @@ const HowToUse = () => {
                         </button>
                     </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-10 mb-16">
+                <div className={`grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-x-5 gap-y-10`}>
                     <div>
-                        <PostCard
-                            title="Getting Started with Completely"
-                            category="General"
-                        />
+                        <Link to="/blog-post">
+                            <div className="flex flex-col">
+                                <div className="relative">
+                                    <img src={BlogPost1} alt="News" className="w-full" />
+                                    <div className="absolute flex items-center gap-2 bottom-4 left-4">
+                                        <div className="flex gap-4 items-center">
+                                            <button className="bg-white rounded-full text-secondary font-medium text-xs px-4 py-2">Using Completely</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="mt-3">
+                                    <p className="text-primary text-xl md:text-xl 2xl:text-2xl font-bold md:leading-7">
+                                        Getting Started with Completely
+                                    </p>
+                                </div>
+                            </div>
+                        </Link>
                     </div>
                     <div>
-                        <PostCard
-                            title="Getting Started with Completely"
-                            category="General"
-                        />
+                        <Link to="/blog-post">
+                            <div className="flex flex-col">
+                                <div className="relative">
+                                    <img src={BlogPost2} alt="News" className="w-full" />
+                                    <div className="absolute flex items-center gap-2 bottom-4 left-4">
+                                        <div className="flex gap-4 items-center">
+                                            <button className="bg-white rounded-full text-secondary font-medium text-xs px-4 py-2">General</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="mt-3">
+                                    <p className="text-primary text-xl md:text-xl 2xl:text-2xl font-bold md:leading-7">
+                                        Providing clear job instructions
+                                    </p>
+                                </div>
+                            </div>
+                        </Link>
                     </div>
                     <div>
-                        <PostCard
-                            title="Getting Started with Completely"
-                            category="General"
-                        />
+                        <Link to="/blog-post">
+                            <div className="flex flex-col">
+                                <div className="relative">
+                                    <img src={BlogPost1} alt="News" className="w-full" />
+                                    <div className="absolute flex items-center gap-2 bottom-4 left-4">
+                                        <div className="flex gap-4 items-center">
+                                            <button className="bg-white rounded-full text-secondary font-medium text-xs px-4 py-2">Payments</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="mt-3">
+                                    <p className="text-primary text-xl md:text-xl 2xl:text-2xl font-bold md:leading-7">
+                                        Get help with payments
+                                    </p>
+                                </div>
+                            </div>
+                        </Link>
                     </div>
                     <div>
-                        <PostCard
-                            title="Getting Started with Completely"
-                            category="General"
-                        />
+                        <Link to="/blog-post">
+                            <div className="flex flex-col">
+                                <div className="relative">
+                                    <img src={BlogPost1} alt="News" className="w-full" />
+                                    <div className="absolute flex items-center gap-2 bottom-4 left-4">
+                                        <div className="flex gap-4 items-center">
+                                            <button className="bg-white rounded-full text-secondary font-medium text-xs px-4 py-2">Using Completely</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="mt-3">
+                                    <p className="text-primary text-xl md:text-xl 2xl:text-2xl font-bold md:leading-7">
+                                        Manage your account
+                                    </p>
+                                </div>
+                            </div>
+                        </Link>
                     </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10">
+                <CustomModalVideo isOpen={isOpen} handleOpen={handleOpen} />
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 mt-16">
                     <div>
                         <div className="relative">
                             <img src={Post1} alt="Post" className="w-full" />
-                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer">
+                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer" onClick={() => handleOpen()}>
                                 <img src={PlayCircle} alt="Circle" className="w-20 h-20" />
                             </div>
                         </div>
@@ -103,7 +163,7 @@ const HowToUse = () => {
                     <div>
                         <div className="relative">
                             <img src={Post2} alt="Post" className="w-full" />
-                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer">
+                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer" onClick={() => handleOpen()}>
                                 <img src={PlayCircle} alt="Circle" className="w-20 h-20" />
                             </div>
                         </div>
@@ -114,7 +174,7 @@ const HowToUse = () => {
                     <div>
                         <div className="relative">
                             <img src={Post3} alt="Post" className="w-full" />
-                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer">
+                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer" onClick={() => handleOpen()}>
                                 <img src={PlayCircle} alt="Circle" className="w-20 h-20" />
                             </div>
                         </div>

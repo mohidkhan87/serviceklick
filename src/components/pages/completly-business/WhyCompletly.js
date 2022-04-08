@@ -5,7 +5,7 @@ import Container from "../../ui/Container";
 import AdBackground from "../../../assets/images/shared/ellipse-gray.png";
 import UpperAd from "../../../assets/images/pages/how-it-works/ad.png";
 
-const ServiceAd = () => {
+const WhyCompletly = () => {
   return (
     <Container>
       <div className="grid md:grid-cols-2 grid-cols-1 xl:gap-0 md:gap-12 gap-20 my-16">
@@ -63,4 +63,4 @@ const ServiceAd = () => {
   );
 };
 
-export default ServiceAd;
+export default WhyCompletly;

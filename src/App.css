@@ -65,8 +65,7 @@
 /* QR Code Modal */
 .QR-code_modal,
 .QR-code_modal {
-  width: 95%;
-  max-width: 700px;
+  max-width: 900px;
 }
 
 /* ****************************************************** */

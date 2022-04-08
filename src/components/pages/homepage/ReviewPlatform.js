@@ -9,7 +9,7 @@ const ReviewPlatform = () => {
   return (
     <div>
       <Container>
-        <div className="flex flex-col gap-5 md:flex-row mx-auto">
+        <div className="w-max flex flex-col gap-5 md:flex-row mx-auto">
           <div className="flex items-center">
             <p className="text-darkGray 2xl:text-lg break-words">
               What customers say about our services on

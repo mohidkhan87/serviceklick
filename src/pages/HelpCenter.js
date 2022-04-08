@@ -12,7 +12,9 @@ const HelpCenter = () => {
     <div>
       <Poster />
       <MarginBottom margin={16} />
-      <HowToUse />
+      <div className='relative z-30'>
+        <HowToUse />
+      </div>
       <MarginBottom margin={16} />
       <PopularGuide />
       <NeedHelp />

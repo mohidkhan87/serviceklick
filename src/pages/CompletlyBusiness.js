@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Business from '../components/pages/completly-business/Business';
-import WhyCompletly from '../components/pages/completly-business/WhyCompletly'
 import DiscoverBenefits from '../components/pages/faqs/DiscoverBenefits'
 import MarginBottom from '../components/shared/spacing/MarginBottom';
 import ReadyToStart from '../components/pages/completly-business/ReadyToStart';
@@ -19,7 +18,6 @@ const CompletlyBusiness = () => {
       <MarginBottom margin={16} />
       <DiscoverBenefits title="Discover the Benefits of Completely" description="A world-leading platform for professionals." />
       <MarginBottom margin={16} />
-      <WhyCompletly />
       <MarginBottom margin={16} />
       <OurPartners />
       <MarginBottom margin={16} />

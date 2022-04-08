@@ -2,16 +2,25 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import Container from "../../ui/Container";
+import CustomModalVideo from '../../shared/CustomModalVideo'
+
+
 import Nav from "./Nav";
 import Section from "./Section";
 import PostCard from '../../shared/cards/PostCard'
 
 import thumbnailImage from '../../../assets/images/pages/blog-post/thumbnail.png'
+import PlayCircle from "../../../assets/images/shared/play-circle.svg";
+
 
 const Content = () => {
     const [currentActive, setCurrentActive] = useState(1)
     const changeCurrentActive = (val) => {
         setCurrentActive(val)
+    }
+    const [isOpen, setOpen] = useState(false)
+    const handleOpen = () => {
+        setOpen(!isOpen)
     }
     const postsData = [
         { title: 'Getting Started with Completely', category: 'Using Completly' },
@@ -27,6 +36,7 @@ const Content = () => {
                         <span className="inline-block font-bold pb-px border-b border-darkGray"><Link to='/'>Home</Link></span> <span className="font-light">/ Terms</span>
                     </p>
                 </div>
+                <CustomModalVideo isOpen={isOpen} handleOpen={handleOpen} />
                 <div className="flex gap-8 2xl:gap-16 mb-16">
                     <div className="hidden lg:block w-60 2xl:w-72 bg-white sticky top-0 h-max pt-10">
                         <Nav currentActive={currentActive} changeCurrentActive={changeCurrentActive} />
@@ -39,8 +49,15 @@ const Content = () => {
                             <h2 className="text-primary text-3xl 2xl:text-5xl font-bold">
                                 Article Heading
                             </h2>
-                            <div className="my-5">
+                            <div className="my-5 w-max relative">
                                 <img src={thumbnailImage} alt="Thumbnail" className="cursor-pointer" />
+                                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer" onClick={() => handleOpen()}>
+                                    <img
+                                        src={PlayCircle}
+                                        alt="Video Banner"
+                                        className="w-16 h-16"
+                                    />
+                                </div>
                             </div>
                         </div>
                         <Section
