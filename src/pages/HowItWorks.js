@@ -19,7 +19,7 @@ const HowItWorks = () => {
       <div className="relative z-30">
         <Poster />
       </div>
-      <MarginBottom margin={16} />
+      <MarginBottom margin={24} />
       <WhyCompletly />
       <MarginBottom margin={16} />
       <Flow />

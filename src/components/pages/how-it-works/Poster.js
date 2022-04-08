@@ -2,12 +2,19 @@ import React, { useState } from 'react'
 
 import HeaderWithPoster from '../../../components/shared/navigation/HeaderWithPoster';
 import Container from '../../ui/Container'
+import CustomModalVideo from '../../shared/CustomModalVideo';
 
 import SmallBanner from '../../../assets/images/pages/how-it-works/small-banner.png'
 import PlayCircle from "../../../assets/images/shared/play-circle.svg";
 
+import Post1 from '../../../assets/images/pages/homepage/benefit.png'
+
 const Poster = () => {
     const [isClient, setIsClient] = useState("buyers");
+    const [isOpen, setOpen] = useState(false)
+    const handleOpen = () => {
+        setOpen(!isOpen)
+    }
 
     return (
         <div className='relative'>
@@ -60,10 +67,11 @@ const Poster = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex justify-center -mt-32'>
+            <CustomModalVideo isOpen={isOpen} handleOpen={handleOpen} />
+            <div className='flex justify-center -mt-32 mb-16'>
                 <div className='w-max relative'>
                     <img src={SmallBanner} alt="banner" />
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer">
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer" onClick={() => handleOpen()}>
                         <img
                             src={PlayCircle}
                             alt="Video Banner"
@@ -72,6 +80,38 @@ const Poster = () => {
                     </div>
                 </div>
             </div>
+            <Container>
+                <h2 className="text-primary font-bold text-3xl mb-4">Finding Local Professionals with Completely</h2>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10'>
+                    <div>
+                        <div className='relative'>
+                            <img src={Post1} alt="Post" className='w-full' />
+                            <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer' onClick={() => handleOpen()}>
+                                <img src={PlayCircle} alt="Circle" className='w-16 h-16' />
+                            </div>
+                        </div>
+                        <h2 className='text-primary font-bold mt-2'>How to find local professionals for pretty much anything.</h2>
+                    </div>
+                    <div>
+                        <div className='relative'>
+                            <img src={Post1} alt="Post" className='w-full' />
+                            <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer' onClick={() => handleOpen()}>
+                                <img src={PlayCircle} alt="Circle" className='w-16 h-16' />
+                            </div>
+                        </div>
+                        <h2 className='text-primary font-bold mt-2'>How to find local professionals for pretty much anything.</h2>
+                    </div>
+                    <div>
+                        <div className='relative'>
+                            <img src={Post1} alt="Post" className='w-full' />
+                            <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer' onClick={() => handleOpen()}>
+                                <img src={PlayCircle} alt="Circle" className='w-16 h-16' />
+                            </div>
+                        </div>
+                        <h2 className='text-primary font-bold mt-2'>How to find local professionals for pretty much anything.</h2>
+                    </div>
+                </div>
+            </Container>
         </div>
     )
 }

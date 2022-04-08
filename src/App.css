@@ -15,6 +15,11 @@
 .slick-next {
   display: none !important;
 }
+/* Start slides from start and not from center */
+.slick-track {
+  margin-left: unset !important;
+  margin-right: unset !important
+ }
 
 /* Ellipse Profiles */
 .ellipse-circle-2 {
