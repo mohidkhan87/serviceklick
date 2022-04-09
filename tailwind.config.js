@@ -23,6 +23,11 @@ module.exports = {
         gradientPink: "#F9CFC6",
         gradientBlue: "#B9D2EA",
         textRed: "#E52322",
+
+        CustomerYellow: '#FFC107',
+        CustomerGreen: '#044855',
+        CustomerRed: '#911436',
+        CategoriesYellow: '#F5AC2E'
       },
       fontFamily: {
         sans: ["silka", ...defaultTheme.fontFamily.sans],

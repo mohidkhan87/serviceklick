@@ -8,12 +8,18 @@ import ServiceAd from "../components/shared/ServiceAd";
 import Services from "../components/pages/homepage/Services";
 import Satisfaction from "../components/pages/homepage/Satisfaction";
 import Benefits from "../components/pages/homepage/Benefits";
+import Media from "../components/pages/homepage/Media";
 import News from "../components/pages/homepage/News";
 import Reviews from "../components/pages/homepage/Reviews";
 import ReviewPlatform from "../components/pages/homepage/ReviewPlatform";
 
-import Posts from "../components/shared/Posts";
+import CustomerPoster from "../components/pages/homepage/find-customer/CustomerPoster";
+import Figures from "../components/pages/homepage/find-customer/Figures";
+import WhyCompletly from "../components/shared/WhyCompletly"
+import IncredibleProfessionals from "../components/pages/homepage/find-customer/IncredibleProfessionals";
+import Posts from "../components/pages/homepage/find-customer/Posts";
 import ReadyToStart from "../components/pages/homepage/find-customer/ReadyToStart";
+import DiscoverBenefits from "../components/pages/faqs/DiscoverBenefits";
 
 import Footer from "./../components/shared/navigation/Footer";
 
@@ -22,12 +28,6 @@ const Home = () => {
   const handleSetView = (val) => {
     setView(val)
   }
-  const postsData = [
-    { title: 'How to find local professionals for pretty much anything.', date:"February 24, 2022", category: 'News' },
-    { title: 'How to find local professionals for pretty much anything.', date:"February 24, 2022", category: 'Inspiration' },
-    { title: 'How to find local professionals for pretty much anything.', date:"February 24, 2022", category: 'Sponsored' },
-  ];
-
   return (
     <div>
       {view === "professional" ? (
@@ -41,6 +41,8 @@ const Home = () => {
           <Services />
           <Satisfaction />
           <Benefits />
+          <MarginBottom margin={16} />
+          <Media />
           <News />
           <Reviews />
           <ReviewPlatform />
@@ -49,9 +51,24 @@ const Home = () => {
         </>
       ) :
         <>
-          <Posts title="More Help articles" postsData={postsData} postsPerRow={3} />
+          <div className="relative z-30">
+            <CustomerPoster handleSetView={handleSetView} />
+          </div>
+          <MarginBottom margin={16} />
+          <Figures />
+          <MarginBottom margin={16} />
+          <DiscoverBenefits title="Discover the Benefits of Completely" description="A world-leading platform for professionals." />
+          <MarginBottom margin={16} />
+          <Benefits />
+          <MarginBottom margin={16} />
+          <WhyCompletly />
+          <MarginBottom margin={16} />
+          <IncredibleProfessionals />
+          <MarginBottom margin={16} />
+          <Posts />
           <MarginBottom margin={16} />
           <Reviews />
+          <MarginBottom margin={16} />
           <ReviewPlatform />
           <ReadyToStart />
           <MarginBottom margin={16} />
