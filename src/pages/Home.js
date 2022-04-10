@@ -13,6 +13,7 @@ import News from "../components/pages/homepage/News";
 import Reviews from "../components/pages/homepage/Reviews";
 import ReviewPlatform from "../components/pages/homepage/ReviewPlatform";
 
+import StickyNav from "../components/pages/homepage/find-customer/StickyNav";
 import CustomerPoster from "../components/pages/homepage/find-customer/CustomerPoster";
 import Figures from "../components/pages/homepage/find-customer/Figures";
 import WhyCompletly from "../components/shared/WhyCompletly"
@@ -20,6 +21,7 @@ import IncredibleProfessionals from "../components/pages/homepage/find-customer/
 import Posts from "../components/pages/homepage/find-customer/Posts";
 import ReadyToStart from "../components/pages/homepage/find-customer/ReadyToStart";
 import DiscoverBenefits from "../components/pages/faqs/DiscoverBenefits";
+import Steps from "../components/pages/homepage/find-customer/Steps";
 
 import Footer from "./../components/shared/navigation/Footer";
 
@@ -57,11 +59,17 @@ const Home = () => {
           <MarginBottom margin={16} />
           <Figures />
           <MarginBottom margin={16} />
+          <div className='sticky z-30' style={{top: '90px'}}>
+            <StickyNav />
+          </div>
+          <MarginBottom margin={16} />
           <DiscoverBenefits title="Discover the Benefits of Completely" description="A world-leading platform for professionals." />
           <MarginBottom margin={16} />
           <Benefits />
           <MarginBottom margin={16} />
           <WhyCompletly />
+          <MarginBottom margin={16} />
+          <Steps />
           <MarginBottom margin={16} />
           <IncredibleProfessionals />
           <MarginBottom margin={16} />

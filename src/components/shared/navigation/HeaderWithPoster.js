@@ -13,16 +13,16 @@ import GlobeBlack from "../../../assets/images/pages/homepage/globe-black.svg";
 const Header = ({ isSearching, background, textColor, isAbsolute }) => {
   const [isMenu, setIsMenu] = useState(false);
   const [showLanguages, setShowLanguages] = useState(false);
-  const [scrollingUp, setScrollingUp] = useState(false)
+  const [isOnTop, setIsOnTop] = useState(false)
   
-  let prevScroll = window.pageYOffset
   const handleScroll = () => {
-    const currScroll = window.pageYOffset
-    const isScrolled = prevScroll > currScroll
-    setScrollingUp(isScrolled)
-    prevScroll = currScroll
+    if (window !== undefined) {
+      let windowHeight = window.scrollY;
+      windowHeight > 0 ? setIsOnTop(false) : setIsOnTop(true);
+    }
   }
   useEffect(() => {
+    handleScroll()
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -38,9 +38,10 @@ const Header = ({ isSearching, background, textColor, isAbsolute }) => {
     setShowLanguages(value);
   }
 
+  // ${isAbsolute && isOnTop && "absolute top-0 left-0"} = If absolute and is on top
   return (
     <div
-      className={`w-full ${isAbsolute && "absolute top-0 left-0"}  ${!scrollingUp && !isAbsolute ? 'fixed border-b-2' : ''} bg-${background} ${isSearching ? "z-20" : "z-40"
+      className={`w-full ${isAbsolute && isOnTop && "absolute top-0 left-0"} ${isAbsolute && !isOnTop && "top-0 left-0 bg-white"} ${!isOnTop ? 'fixed border-b-2' : ''} bg-${background} ${isSearching ? "z-20" : "z-40"
         }`}
     >
       <Container>
@@ -49,26 +50,26 @@ const Header = ({ isSearching, background, textColor, isAbsolute }) => {
             className="lg:hidden transform sm:rotate-0 rotate-180 flex flex-col gap-1 sm:gap-1.5"
             onClick={() => setIsMenu(!isMenu)}
           >
-            <div className={`h-1 sm:w-7 w-6 rounded-full bg-${textColor}`}></div>
-            <div className={`h-1 sm:w-9 w-7 rounded-full bg-${textColor}`}></div>
-            <div className={`h-1 sm:w-5 w-5 rounded-full bg-${textColor}`}></div>
+            <div className={`h-1 sm:w-7 w-6 rounded-full ${isOnTop ? `bg-${textColor}`:'bg-primary'}`}></div>
+            <div className={`h-1 sm:w-9 w-7 rounded-full ${isOnTop ? `bg-${textColor}`:'bg-primary'}`}></div>
+            <div className={`h-1 sm:w-5 w-5 rounded-full ${isOnTop ? `bg-${textColor}`:'bg-primary'}`}></div>
           </div>
           <div>
             <div>
               <Link to="/">
                 <div className="flex items-center gap-3">
-                  <img src={!isAbsolute ? Logo:LogoWhite} alt="logo" className="w-auto h-12" />
+                  <img src={isAbsolute && isOnTop ? LogoWhite:Logo} alt="logo" className="w-auto h-12" />
                   {/* <h1 className="sm:text-2xl text-xl font-bold">Serviceklick</h1> */}
                 </div>
               </Link>
             </div>
           </div>
           <div className="hidden sm:flex items-center gap-7">
-            <p className={`hidden lg:block text-${textColor}`}><Link to='/how-it-works'>How it Works</Link></p>
-            <p className={`hidden lg:block text-${textColor}`}><Link to='/about-us'>Abouts Us</Link></p>
-            <p className={`hidden lg:block text-${textColor}`}><Link to='/newsroom'>Newsroom</Link></p>
+            <p className={`hidden lg:block ${isOnTop ? `text-${textColor}`:'text-primary'}`}><Link to='/how-it-works'>How it Works</Link></p>
+            <p className={`hidden lg:block ${isOnTop ? `text-${textColor}`:'text-primary'}`}><Link to='/about-us'>Abouts Us</Link></p>
+            <p className={`hidden lg:block ${isOnTop ? `text-${textColor}`:'text-primary'}`}><Link to='/newsroom'>Newsroom</Link></p>
             <div className="cursor-pointer" onClick={() => toggleOptions()}>
-              <img src={textColor === "white" ? Globe : GlobeBlack} alt="" />
+              <img src={`${isOnTop && textColor === "white" ? Globe:GlobeBlack}`} alt="Globe" />
             </div>
             <button className={`py-2 px-6 rounded-full font-bold ${textColor === "white" ? "text-primary bg-white" : `text-white bg-primary`}`}>
               Join

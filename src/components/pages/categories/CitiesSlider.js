@@ -20,7 +20,7 @@ const CitiesSlider = () => {
     const [sliderRef, setSliderRef] = useState(null); // set the slider
     let [slideBack, setSlideBack] = useState(0);
 
-    const showSlides = 4;
+    const showSlides = 6;
     const settings = {
         dots: false,
         infinite: false,
@@ -84,6 +84,18 @@ const CitiesSlider = () => {
             img: Image1,
             name: 'Fribourg',
             isComingSoon: false
+        },
+        {
+            id: 6,
+            img: Image2,
+            name: 'Vaud',
+            isComingSoon: false
+        },
+        {
+            id: 7,
+            img: Image3,
+            name: 'Geneva',
+            isComingSoon: false
         }
     ];
 
@@ -96,7 +108,7 @@ const CitiesSlider = () => {
                     <Slider ref={setSliderRef} {...settings}>
                         {sliderData.map((arr, index) => (
                             <div className="outline-none sm:pr-3 pr-2" key={index}>
-                                <Link to='/about-us'>
+                                <Link to='/categories'>
                                     <img src={arr.img} alt="w-full" />
                                 </Link>
                                 <h2 className='text-primary text-xl font-bold mt-2'>
