@@ -57,6 +57,9 @@ module.exports = {
         pinkGradient:
           "linear-gradient(0deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)), linear-gradient(167.96deg, #B11842 0%, #B11842 100%)",
       },
+      transitionProperty: {
+        'width': 'width'
+      },
     },
   },
   plugins: [],

@@ -5,6 +5,7 @@ import Poster from '../components/pages/categories/Poster';
 import WhyCompletly from "../components/shared/WhyCompletly"
 import CitiesSlider from '../components/pages/categories/CitiesSlider';
 import TrustSlider from '../components/pages/categories/TrustSlider';
+import PopularProducts from '../components/pages/categories/PopularProducts';
 import Reviews from "../components/pages/homepage/Reviews";
 import ReviewPlatform from "../components/pages/homepage/ReviewPlatform";
 import ServiceAd from "../components/shared/ServiceAd";
@@ -22,6 +23,8 @@ const Categories = () => {
       <CitiesSlider />
       <MarginBottom margin={16} />
       <TrustSlider />
+      <MarginBottom margin={16} />
+      <PopularProducts />
       <MarginBottom margin={16} />
       <WhyCompletly />
       <MarginBottom margin={16} />

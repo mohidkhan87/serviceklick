@@ -174,7 +174,7 @@ const Reviews = () => {
                 <img src={reviews[5].image} alt="" />
               </div>
               {/*  */}
-              <div
+              {/* <div
                 className="inner-ellipse-circle-2 absolute h-10 w-10 bg-gray-300 rounded-full transform scale-75 md:scale-100 2xl:scale-125 cursor-pointer"
                 onMouseOver={() => updateFeedback(reviews[6])}
               >
@@ -186,9 +186,9 @@ const Reviews = () => {
                   />
                 )}
                 <img src={reviews[6].image} alt="" />
-              </div>
+              </div> */}
               {/*  */}
-              <div
+              {/* <div
                 className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 scale-75 md:scale-100 2xl:scale-125 h-16 w-16 bg-gray-300 rounded-full cursor-pointer"
                 onMouseOver={() => updateFeedback(reviews[7])}
               >
@@ -200,7 +200,7 @@ const Reviews = () => {
                   />
                 )}
                 <img src={reviews[7].image} alt="" />
-              </div>
+              </div> */}
               {/*  */}
               <div
                 className="inner-ellipse-circle-4 absolute h-14 w-14 bg-gray-300 rounded-full transform scale-75 md:scale-100 2xl:scale-125 cursor-pointer"

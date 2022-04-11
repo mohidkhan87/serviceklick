@@ -21,6 +21,8 @@ import IncredibleProfessionals from "../components/pages/homepage/find-customer/
 import Posts from "../components/pages/homepage/find-customer/Posts";
 import ReadyToStart from "../components/pages/homepage/find-customer/ReadyToStart";
 import DiscoverBenefits from "../components/pages/faqs/DiscoverBenefits";
+import MonthlyEarnings from "../components/pages/homepage/find-customer/MonthlyEarnings";
+import ServicesOffer from "../components/pages/homepage/find-customer/ServicesOffer";
 import Steps from "../components/pages/homepage/find-customer/Steps";
 
 import Footer from "./../components/shared/navigation/Footer";
@@ -70,6 +72,12 @@ const Home = () => {
           <WhyCompletly />
           <MarginBottom margin={16} />
           <Steps />
+          <MarginBottom margin={16} />
+          <div className="hidden md:block">
+            <MonthlyEarnings />
+            <MarginBottom margin={16} />
+          </div>
+          <ServicesOffer />
           <MarginBottom margin={16} />
           <IncredibleProfessionals />
           <MarginBottom margin={16} />
