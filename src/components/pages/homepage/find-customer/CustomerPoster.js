@@ -63,7 +63,6 @@ const CustomerPoster = ({ handleSetView }) => {
 
             <HeaderWithPoster
                 isSearching={isSearching}
-                background="transparent"
                 textColor="white"
                 isAbsolute={true}
             />

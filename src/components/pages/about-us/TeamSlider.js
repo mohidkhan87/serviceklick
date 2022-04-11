@@ -19,7 +19,7 @@ const TeamSlider = () => {
     const [sliderRef, setSliderRef] = useState(null); // set the slider
     let [slideBack, setSlideBack] = useState(0);
 
-    const showSlides = 4;
+    const showSlides = 5;
     const settings = {
         dots: false,
         infinite: false,
@@ -80,6 +80,12 @@ const TeamSlider = () => {
         },
         {
             id: 5,
+            img: Image3,
+            name: 'Caterina Fadda',
+            position: 'Customer Care'
+        },
+        {
+            id: 6,
             img: Image3,
             name: 'Caterina Fadda',
             position: 'Customer Care'

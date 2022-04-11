@@ -14,7 +14,7 @@ const Poster = () => {
     return (
         <div>
             <div className="relative z-30 border-b border-lightGray">
-                <HeaderWithPoster background="transparent" textColor="white" isAbsolute={true} />
+                <HeaderWithPoster textColor="white" isAbsolute={true} />
             </div>
             <div
                 className={`bg-CategoriesYellow relative bg-cover bg-bottom bg-no-repeat w-full pt-24 md:pt-36 lg:pt-24 pb-20 md:pb-0`}

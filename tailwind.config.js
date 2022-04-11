@@ -27,7 +27,9 @@ module.exports = {
         CustomerYellow: '#FFC107',
         CustomerGreen: '#044855',
         CustomerRed: '#911436',
-        CategoriesYellow: '#F5AC2E'
+        CategoriesYellow: '#F5AC2E',
+
+        timelineGreen: '#27A325'
       },
       fontFamily: {
         sans: ["silka", ...defaultTheme.fontFamily.sans],

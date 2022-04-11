@@ -6,7 +6,7 @@ const Poster = () => {
     return (
         <div className='relative'>
             <div className="relative z-30">
-                <HeaderWithPoster background="transparent" textColor="primary" isAbsolute={true} />
+                <HeaderWithPoster textColor="primary" isAbsolute={true} />
             </div>
             <div className='relative'>
                 <div className='lg:block w-full rounded-ellipseCurveCenter bg-gradient-to-b from-gradientPink to-gradientBlue py-20 z-10 relative'>
