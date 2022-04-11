@@ -10,7 +10,9 @@ import Footer from "./../components/shared/navigation/Footer";
 const HelpCenter = () => {
   return (
     <div>
-      <Poster />
+      <div className='relative z-40'>
+        <Poster />
+      </div>
       <MarginBottom margin={16} />
       <div className='relative z-30'>
         <HowToUse />

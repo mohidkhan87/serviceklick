@@ -122,7 +122,6 @@ const Poster = ({ handleSetView }) => {
 
       <HeaderWithPoster
         isSearching={isSearching}
-        textColor="white"
         isAbsolute={true}
       />
 

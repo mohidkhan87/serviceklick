@@ -9,7 +9,7 @@ const Poster = () => {
   return (
     <div className="relative">
       <div className="relative z-30 border-b border-lightGray">
-        <HeaderWithPoster background="white" textColor="primary" isAbsolute={false} />
+        <HeaderWithPoster isAbsolute={false} />
       </div>
       <div className="hidden lg:block absolute top-0 right-0 w-3/5 h-80 lg:h-52 rounded-ellipseCurve bg-lightPink z-10"></div>
       <Container>

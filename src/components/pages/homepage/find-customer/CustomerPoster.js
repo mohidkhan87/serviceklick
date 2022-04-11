@@ -28,7 +28,6 @@ const CustomerPoster = ({ handleSetView }) => {
             image: PosterImage1
         }
     ];
-    const [isSearching, setIsSearching] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
@@ -61,11 +60,7 @@ const CustomerPoster = ({ handleSetView }) => {
                 </svg>
             </div>
 
-            <HeaderWithPoster
-                isSearching={isSearching}
-                textColor="white"
-                isAbsolute={true}
-            />
+            <HeaderWithPoster isAbsolute={true} />
 
             <Container>
                 <div className="grid md:grid-cols-2 grid-cols-1 xl:gap-0 gap-8 text-white">
@@ -114,12 +109,6 @@ const CustomerPoster = ({ handleSetView }) => {
                         </div>
                     </div>
                 </div>
-                {isSearching && (
-                    <div
-                        className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 z-20"
-                        onClick={() => setIsSearching(false)}
-                    ></div>
-                )}
             </Container>
         </div>
     );

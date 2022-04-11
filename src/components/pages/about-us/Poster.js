@@ -8,7 +8,7 @@ const Poster = () => {
     return (
         <div className='relative'>
             <div className='relative z-30'>
-                <HeaderWithPoster background="white" textColor="primary" isAbsolute={false} />
+                <HeaderWithPoster isAbsolute={false} />
             </div>
             <div className='relative'>
                 <div className='w-full'>

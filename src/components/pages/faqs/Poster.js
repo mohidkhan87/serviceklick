@@ -7,7 +7,7 @@ const Poster = () => {
     return (
         <section className='relative'>
             <div className='relative z-30'>
-                <HeaderWithPoster background="white" textColor="primary" isAbsolute={false} />
+                <HeaderWithPoster isAbsolute={false} />
             </div>
             <div className='border-t py-1 z-20'>
                 <Container>

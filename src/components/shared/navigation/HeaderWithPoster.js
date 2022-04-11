@@ -10,7 +10,7 @@ import LogoWhite from "../../../assets/images/logo-white.png";
 import Globe from "../../../assets/images/pages/homepage/globe.svg";
 import GlobeBlack from "../../../assets/images/pages/homepage/globe-black.svg";
 
-const Header = ({ isSearching, background, textColor, isAbsolute }) => {
+const Header = ({ isSearching, isAbsolute }) => {
   const [isMenu, setIsMenu] = useState(false);
   const [showLanguages, setShowLanguages] = useState(false);
   const [isOnTop, setIsOnTop] = useState(false)
@@ -41,7 +41,7 @@ const Header = ({ isSearching, background, textColor, isAbsolute }) => {
   // ${isAbsolute && isOnTop && "absolute top-0 left-0"} = If absolute and is on top
   return (
     <div
-      className={`w-full ${isAbsolute && isOnTop && "absolute top-0 left-0"} ${isAbsolute && !isOnTop && "top-0 left-0 bg-white"} ${!isOnTop ? 'fixed border-b-2' : ''} bg-${background} ${isSearching ? "z-20" : "z-40"
+      className={`w-full ${isAbsolute && isOnTop && "absolute top-0 left-0 bg-transparent"} ${isAbsolute && !isOnTop && "top-0 left-0 bg-white"} ${!isAbsolute && 'bg-white'} ${!isOnTop ? 'fixed border-b-2' : ''} ${isSearching ? "z-20" : "z-40"
         }`}
     >
       <Container>
@@ -50,9 +50,9 @@ const Header = ({ isSearching, background, textColor, isAbsolute }) => {
             className="lg:hidden transform sm:rotate-0 rotate-180 flex flex-col gap-1 sm:gap-1.5"
             onClick={() => setIsMenu(!isMenu)}
           >
-            <div className={`h-1 sm:w-7 w-6 rounded-full ${isOnTop ? `bg-${textColor}`:'bg-primary'}`}></div>
-            <div className={`h-1 sm:w-9 w-7 rounded-full ${isOnTop ? `bg-${textColor}`:'bg-primary'}`}></div>
-            <div className={`h-1 sm:w-5 w-5 rounded-full ${isOnTop ? `bg-${textColor}`:'bg-primary'}`}></div>
+            <div className={`h-1 sm:w-7 w-6 rounded-full ${isAbsolute && isOnTop ? `bg-white`: isAbsolute && !isOnTop ? 'bg-primary': !isAbsolute && 'bg-primary'}`}></div>
+            <div className={`h-1 sm:w-9 w-7 rounded-full ${isAbsolute && isOnTop ? `bg-white`: isAbsolute && !isOnTop ? 'bg-primary': !isAbsolute && 'bg-primary'}`}></div>
+            <div className={`h-1 sm:w-5 w-5 rounded-full ${isAbsolute && isOnTop ? `bg-white`: isAbsolute && !isOnTop ? 'bg-primary': !isAbsolute && 'bg-primary'}`}></div>
           </div>
           <div>
             <div>
@@ -65,13 +65,13 @@ const Header = ({ isSearching, background, textColor, isAbsolute }) => {
             </div>
           </div>
           <div className="hidden sm:flex items-center gap-7">
-            <p className={`hidden lg:block ${isOnTop ? `text-${textColor}`:'text-primary'}`}><Link to='/how-it-works'>How it Works</Link></p>
-            <p className={`hidden lg:block ${isOnTop ? `text-${textColor}`:'text-primary'}`}><Link to='/about-us'>Abouts Us</Link></p>
-            <p className={`hidden lg:block ${isOnTop ? `text-${textColor}`:'text-primary'}`}><Link to='/newsroom'>Newsroom</Link></p>
+            <p className={`hidden lg:block ${isAbsolute && isOnTop ? `text-white`:isAbsolute && !isOnTop ? 'text-primary': !isAbsolute && 'text-primary'}`}><Link to='/how-it-works'>How it Works</Link></p>
+            <p className={`hidden lg:block ${isAbsolute && isOnTop ? `text-white`:isAbsolute && !isOnTop ? 'text-primary': !isAbsolute && 'text-primary'}`}><Link to='/about-us'>Abouts Us</Link></p>
+            <p className={`hidden lg:block ${isAbsolute && isOnTop ? `text-white`:isAbsolute && !isOnTop ? 'text-primary': !isAbsolute && 'text-primary'}`}><Link to='/newsroom'>Newsroom</Link></p>
             <div className="cursor-pointer" onClick={() => toggleOptions()}>
-              <img src={`${isOnTop && textColor === "white" ? Globe:GlobeBlack}`} alt="Globe" />
+              <img src={`${isAbsolute && isOnTop ? Globe: isAbsolute && !isOnTop ? GlobeBlack : !isAbsolute && GlobeBlack}`} alt="Globe" />
             </div>
-            <button className={`py-2 px-6 rounded-full font-bold ${textColor === "white" ? "text-primary bg-white" : `text-white bg-primary`}`}>
+            <button className={`py-2 px-6 rounded-full font-bold ${isAbsolute && isOnTop ? `text-primary bg-white`:isAbsolute && !isOnTop ? 'bg-primary text-white': !isAbsolute && 'bg-primary text-white'}`}>
               Join
             </button>
           </div>
