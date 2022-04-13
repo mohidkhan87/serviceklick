@@ -19,7 +19,7 @@ const Poster = () => {
     return (
         <div className='relative'>
             <HeaderWithPoster isAbsolute={false} />
-            <div className='border-t py-1 z-20'>
+            {/* <div className='border-t py-1 z-20'>
                 <Container>
                     <div className="flex flex-row flex-wrap gap-5">
                         <div>
@@ -36,7 +36,7 @@ const Poster = () => {
                         </div>
                     </div>
                 </Container>
-            </div>
+            </div> */}
             <div className='relative'>
                 <div className='lg:block w-full rounded-ellipseCurveCenter bg-gradient-to-b from-gradientPink to-gradientBlue py-32 z-10'>
                     <h1 className='text-primary text-3xl font-bold text-center'>How it Works</h1>

@@ -7,15 +7,15 @@ import Why1 from '../../assets/images/shared/why-completly/why-1.png'
 import Why2 from '../../assets/images/shared/why-completly/why-2.png'
 import Why3 from '../../assets/images/shared/why-completly/why-3.png'
 import Why4 from '../../assets/images/shared/why-completly/why-4.png'
-const WhyCompletly = () => {
+const WhyCompletly = ({title}) => {
   const [activeWhy, setActiveWhy] = useState(1)
 
   return (
     <Container>
-      <div className="grid xl:grid-cols-2 grid-cols-1 xl:gap-8 md:gap-12 gap-20 mb-52 xl:my-32 2xl:my-52">
+      <div className="grid xl:grid-cols-2 grid-cols-1 xl:gap-8 md:gap-12 gap-20 xl:my-32 2xl:my-52">
         <div className="flex flex-col justify-start md:mb-20 xl:mb-0">
           <div className=" 2xl:text-5xl xl:text-4xl lg:text-3xl text-2xl font-bold">
-            Why Completely
+            {title}
           </div>
           <div className={`cursor-pointer mt-8 ${activeWhy === 1 ? 'opacity-100' : 'opacity-30'}`} onMouseOver={() => setActiveWhy(1)}>
             <h3 className={`${activeWhy === 1 ? 'text-secondary' : 'text-primary'} font-bold text-2xl`}>Step one: select the type of cleaning service</h3>
@@ -50,7 +50,8 @@ const WhyCompletly = () => {
                 <img
                   src={activeWhy === 1 ? Why1 : activeWhy === 2 ? Why2 : activeWhy === 3 ? Why3 : Why4 }
                   alt="upper-img"
-                  className="w-full relative md:mt-7 z-10"
+                  className="relative z-10"
+                  style={{width: '374px'}}
                 />
               </div>
             </div>

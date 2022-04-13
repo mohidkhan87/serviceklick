@@ -69,7 +69,7 @@ const Home = () => {
           <MarginBottom margin={16} />
           <Benefits />
           <MarginBottom margin={16} />
-          <WhyCompletly />
+          <WhyCompletly title="Why Completely?" />
           <MarginBottom margin={16} />
           <Steps />
           <MarginBottom margin={16} />

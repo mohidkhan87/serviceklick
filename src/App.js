@@ -25,8 +25,19 @@ function App() {
         <Route path='/help-center' element={<HelpCenter />} />
         <Route path='/about-us' element={<AboutUs />} />
         <Route path='/completly-business' element={<CompletlyBusiness />} />
-        <Route path='/categories' element={<Categories />} />
         <Route path='/blog-post' element={<BlogPost />} />
+
+        <Route path='/categories' element={<Categories />} />
+        <Route path='/end-of-lease-cleaning' element={<Categories />} />
+        <Route path='/airbnb-cleaning' element={<Categories />} />
+        <Route path='/private-chef' element={<Categories />} />
+        <Route path='/top-chef' element={<Categories />} />
+        <Route path='/wine' element={<Categories />} />
+        <Route path='/painter' element={<Categories />} />
+        <Route path='/color' element={<Categories />} />
+        <Route path='/assemble-furniture' element={<Categories />} />
+        <Route path='/handymen' element={<Categories />} />
+        <Route path='/electrician' element={<Categories />} />
       </Routes >
     </>
   );

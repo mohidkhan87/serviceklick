@@ -26,7 +26,7 @@ const Categories = () => {
       <MarginBottom margin={16} />
       <PopularProducts />
       <MarginBottom margin={16} />
-      <WhyCompletly />
+      <WhyCompletly title="Find professionals with our app" />
       <MarginBottom margin={16} />
       <Reviews />
       <ReviewPlatform />

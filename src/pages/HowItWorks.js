@@ -21,7 +21,7 @@ const HowItWorks = () => {
         <Poster />
       </div>
       <MarginBottom margin={16} />
-      <WhyCompletly />
+      <WhyCompletly title="Why Completely?" />
       <MarginBottom margin={24} />
       <Flow />
       <MarginBottom margin={16} />
