@@ -49,7 +49,7 @@ const Home = () => {
       });
     } else if (value === "how-it-works") {
       window.scrollTo({
-        top: howItWorksRef.current.offsetTop - "145",
+        top: howItWorksRef.current.offsetTop - "185",
         left: 0,
         behavior: "smooth",
       });

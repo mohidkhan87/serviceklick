@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row gap-10">
           <div className="w-full md:w-72">
             <h4 className="text-primary text-lg 2xl:text-xl font-bold">Adresse Contact Center</h4>
-            <div className="mt-4">
+            <div className="mt-2 border-b border-borderGray pb-2">
               <h5 className="text-primary text-base font-bold">Completely AG</h5>
               <div className="flex gap-1">
                 <div className="flex items-center">
@@ -33,31 +33,31 @@ const Footer = () => {
                 <Link to="/">Weiermatstrasse 22, 4653 Obergösgen CH-Solothurn </Link>
               </p>
             </div>
-            <div className="mt-4">
+            <div className="mt-2 border-b border-borderGray pb-2">
               <h5 className="text-primary text-base font-bold">+41 848 88 81 81</h5>
               <p className="text-footerTextGray hover:text-secondary transition duration-300 ease-in-out text-sm 2xl:text-base mt-0">
                 <Link to="/">CHF 0.08/Min. vom Schweizer Festnetz</Link>
               </p>
             </div>
-            <div className="mt-4">
+            <div className="mt-2  border-b border-borderGray pb-2">
               <h5 className="text-primary text-base font-bold">Montag bis Freitag</h5>
               <p className="text-footerTextGray hover:text-secondary transition duration-300 ease-in-out text-sm 2xl:text-base mt-0">
                 <Link to="/">Support 9.00-18.00 Uhr</Link>
               </p>
             </div>
-            <div className="mt-4">
+            <div className="mt-2  border-b border-borderGray pb-2">
               <h5 className="text-primary text-base font-bold">Samstag bis Sonntag</h5>
               <p className="text-footerTextGray hover:text-secondary transition duration-300 ease-in-out text-sm 2xl:text-base mt-0">
                 <Link to="/">Livechat Support 9.00-16.00</Link>
               </p>
             </div>
-            <div className="mt-4">
+            <div className="mt-2 border-b border-borderGray pb-2">
               <h5 className="text-primary text-base font-bold">@ Contact</h5>
               <p className="text-footerTextGray hover:text-secondary transition duration-300 ease-in-out text-sm 2xl:text-base mt-0">
                 <Link to="/">hello@completely.ch</Link>
               </p>
             </div>
-            <div className="mt-4">
+            <div className="mt-2">
               <h5 className="text-primary text-base font-bold">Folgen Sie uns</h5>
               <div className="w-full grid grid-cols-5 gap-4 mt-5">
                 <div className="w-max">
@@ -178,7 +178,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="md:col-span-2 xl:col-span-4 md:mt-8">
+            <div className="md:col-span-2 xl:col-span-4 md:mt-8 border-t border-borderGray pt-4">
               <h4 className="text-primary text-lg 2xl:text-xl font-bold">Serving in</h4>
               <div>
                 <p className="text-footerTextGray text-sm mt-4">
@@ -188,7 +188,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row justify-between gap-5 lg:gap-0 mt-5 lg:mt-8">
+        <div className="flex flex-col lg:flex-row justify-between gap-5 lg:gap-0 mt-5 lg:mt-8 border-t border-borderGray pt-4">
           <div>
             <ul className="flex flex-col lg:flex-row gap-2 lg:gap-4 text-footerTextGray">
               <li className="hover:text-secondary transition duration-300 ease-in-out">

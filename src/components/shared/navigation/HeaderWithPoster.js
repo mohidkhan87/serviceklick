@@ -20,14 +20,10 @@ const Header = ({ view, isSearching, isAbsolute }) => {
   const [isMegaMenu, setIsMegaMenu] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY > 1300) {
-      setIsMegaMenu(true);
-    } else {
-      setIsMegaMenu(false);
-    }
     if (window !== undefined) {
       let windowHeight = window.scrollY;
       windowHeight > 0 ? setIsOnTop(false) : setIsOnTop(true);
+      windowHeight > 1300 ? setIsMegaMenu(true) : setIsMegaMenu(false);
     }
   };
   useEffect(() => {
@@ -210,9 +206,9 @@ const Header = ({ view, isSearching, isAbsolute }) => {
       {isMegaMenu && location.pathname === "/" && view === "professional" && (
         <div className="mega-container relative md:block hidden bg-white border-t py-0.5 z-0">
           <Container>
-            <div className="flex items-center gap-2 ">
+            <div className="flex items-center gap-2 py-1">
               <div className="relative mega-heading font-medium hover:bg-primary transition-all duration-300 ease-linear cursor-default py-1 px-5 rounded-full hover:text-white">
-                Cleaning
+                <p className="cursor-pointer">Cleaning</p>
                 <div className="mega-menu hidden absolute top-full left-0 pt-2">
                   <div className="w-max bg-white shadow-fade rounded-tl-none rounded-3xl px-5 py-4">
                     <h1 className="text-sm font-bold text-primary">Cleaning</h1>
@@ -227,9 +223,8 @@ const Header = ({ view, isSearching, isAbsolute }) => {
                   </div>
                 </div>
               </div>
-
               <div className="relative mega-heading font-medium hover:bg-primary transition-all duration-300 ease-linear cursor-default py-1 px-5 rounded-full hover:text-white">
-                Handyman
+                <p className="cursor-pointer">Handyman</p>
                 <div className="mega-menu hidden absolute top-full left-0 pt-2">
                   <div className="w-max bg-white shadow-fade rounded-tl-none rounded-3xl px-5 py-4">
                     <h1 className="text-sm font-bold text-primary">Handyman</h1>
@@ -245,7 +240,7 @@ const Header = ({ view, isSearching, isAbsolute }) => {
                 </div>
               </div>
               <div className="relative mega-heading font-medium hover:bg-primary transition-all duration-300 ease-linear cursor-default py-1 px-5 rounded-full hover:text-white">
-                Hospitality
+              <p className="cursor-pointer">Hospitality</p>
                 <div className="mega-menu hidden absolute top-full left-0 pt-2">
                   <div className="w-max bg-white shadow-fade rounded-tl-none rounded-3xl px-5 py-4">
                     <h1 className="text-sm font-bold text-primary">
@@ -263,7 +258,7 @@ const Header = ({ view, isSearching, isAbsolute }) => {
                 </div>
               </div>
               <div className="relative mega-heading font-medium hover:bg-primary transition-all duration-300 ease-linear cursor-default py-1 px-5 rounded-full hover:text-white">
-                Wellness
+                <p className="cursor-pointer text-darkGray hover:text-white">Wellness (Coming Soon)</p>
                 <div className="mega-menu hidden absolute top-full left-0 pt-2">
                   <div className="w-max bg-white shadow-fade rounded-tl-none rounded-3xl px-5 py-4">
                     <h1 className="text-sm font-bold text-primary">Wellness</h1>

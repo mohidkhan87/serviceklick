@@ -2,7 +2,6 @@ import React, {useState} from "react";
 
 import Container from "../ui/Container";
 
-import AdBackground from "../../assets/images/shared/ellipse-gray.png";
 import Why1 from '../../assets/images/shared/why-completly/why-1.png'
 import Why2 from '../../assets/images/shared/why-completly/why-2.png'
 import Why3 from '../../assets/images/shared/why-completly/why-3.png'
@@ -12,7 +11,7 @@ const WhyCompletly = ({title}) => {
 
   return (
     <Container>
-      <div className="grid xl:grid-cols-2 grid-cols-1 xl:gap-8 md:gap-12 gap-20 xl:my-32 2xl:my-52">
+      <div className="grid xl:grid-cols-2 grid-cols-1 xl:gap-8 md:gap-12 gap-20 xl:my-32">
         <div className="flex flex-col justify-start md:mb-20 xl:mb-0">
           <div className=" 2xl:text-5xl xl:text-4xl lg:text-3xl text-2xl font-bold">
             {title}
@@ -42,19 +41,14 @@ const WhyCompletly = ({title}) => {
             </p>
           </div>
         </div>
-        <div className="flex justify-center xl:justify-start mb-10 md:mb-20 xl:mb-0 mt-24 xl:mt-0">
-          <div className="relative flex items-end pb-20">
-            <img src={AdBackground} alt="background ellipse" />
-            <div className="absolute top-0 left-0 h-full w-full flex justify-center items-center transform xl:translate-y-0 lg:-translate-y-1 md:-translate-y-2.5 -translate-y-  5">
-              <div className="w-max">
-                <img
-                  src={activeWhy === 1 ? Why1 : activeWhy === 2 ? Why2 : activeWhy === 3 ? Why3 : Why4 }
-                  alt="upper-img"
-                  className="relative z-10"
-                  style={{width: '374px'}}
-                />
-              </div>
-            </div>
+        <div className="flex justify-center mb-10 md:mb-20 xl:mb-0 mt-24 xl:mt-0">
+          <div className="relative flex justify-center items-center">
+            <img
+              src={activeWhy === 1 ? Why1 : activeWhy === 2 ? Why2 : activeWhy === 3 ? Why3 : Why4 }
+              alt="upper-img"
+              className="relative z-10"
+              style={{width: '420px'}}
+            />
           </div>
         </div>
       </div>
