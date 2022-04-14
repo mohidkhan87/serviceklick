@@ -5,6 +5,43 @@
 .scrollbar-none::-webkit-scrollbar {
   display: none;
 }
+
+/* ****************************************************** */
+/*                    Sticky Nav                  */
+/* ****************************************************** */
+
+.mega-container {
+  /* background-color: red !important; */
+  animation: slide 0.3s linear forwards;
+}
+
+.mega-heading:hover .mega-menu {
+  display: block;
+  animation: slideUp 0.3s linear forwards;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* --------------------------------- */
 /*              HOME PAGE           */
 /* -------------------------------- */
@@ -18,8 +55,8 @@
 /* Start slides from start and not from center */
 .slick-track {
   margin-left: unset !important;
-  margin-right: unset !important
- }
+  margin-right: unset !important;
+}
 
 /* Ellipse Profiles */
 .ellipse-circle-2 {

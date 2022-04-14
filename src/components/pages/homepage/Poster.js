@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-import StarRatings from 'react-star-ratings';
+import StarRatings from "react-star-ratings";
 
 import Container from "../../ui/Container";
 import HeaderWithPoster from "../../shared/navigation/HeaderWithPoster";
@@ -10,7 +10,7 @@ import PosterImage from "../../../assets/images/pages/homepage/poster-img.svg";
 import Location from "../../../assets/images/pages/homepage/location.svg";
 import Service from "../../../assets/images/pages/homepage/service.svg";
 
-const Poster = ({ handleSetView }) => {
+const Poster = ({ view, handleSetView }) => {
   const popularSearches = [
     {
       id: 1,
@@ -54,38 +54,38 @@ const Poster = ({ handleSetView }) => {
     {
       image: PosterImage,
       rating: 5,
-      name: 'Sandra',
-      category: 'Airbnb Cleaning',
-      jobs: null
+      name: "Sandra",
+      category: "Airbnb Cleaning",
+      jobs: null,
     },
     {
       image: PosterImage,
       rating: 4.9,
-      name: 'Marta',
-      category: 'Arbnb Cleaning',
-      jobs: '148'
+      name: "Marta",
+      category: "Arbnb Cleaning",
+      jobs: "148",
     },
     {
       image: PosterImage,
       rating: 4.9,
-      name: 'Pascal',
-      category: 'Painter',
-      jobs: '148'
+      name: "Pascal",
+      category: "Painter",
+      jobs: "148",
     },
     {
       image: PosterImage,
       rating: 4.9,
-      name: 'Peter',
-      category: 'Chef',
-      jobs: '148'
+      name: "Peter",
+      category: "Chef",
+      jobs: "148",
     },
     {
       image: PosterImage,
       rating: 4.9,
-      name: 'Maria',
-      category: 'Home Cleaner',
-      jobs: '148'
-    }
+      name: "Maria",
+      category: "Home Cleaner",
+      jobs: "148",
+    },
   ];
   const [isSearching, setIsSearching] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -123,6 +123,7 @@ const Poster = ({ handleSetView }) => {
       <HeaderWithPoster
         isSearching={isSearching}
         isAbsolute={true}
+        view={view}
       />
 
       <Container>
@@ -165,10 +166,7 @@ const Poster = ({ handleSetView }) => {
                   <div className="absolute top-full left-0 w-full transform translate-y-2.5 rounded-3xl rounded-tr-none bg-white overflow-y-scroll scrollbar-none py-5 px-6 z-50">
                     <h1 className="font-bold">Services</h1>
                     {services.map((service, index) => (
-                      <div
-                        className="flex items-center gap-3 my-2"
-                        key={index}
-                      >
+                      <div className="flex items-center gap-3 my-2" key={index}>
                         <img src={Service} alt="" className="w-12" />
                         <p className="font-semibold text-sm text-red-800">
                           {service.title}
@@ -208,7 +206,6 @@ const Poster = ({ handleSetView }) => {
                 </p>
               ))}
             </div>
-
           </div>
           <div className="hidden md:flex justify-end overflow-hidden">
             <div className="w-max relative">
@@ -228,17 +225,28 @@ const Poster = ({ handleSetView }) => {
                         starDimension="14px"
                         starSpacing="2px"
                         numberOfStars={5}
-                        name='rating'
+                        name="rating"
                       />
                     </div>
                     <div className="flex justify-start items-center mt-2">
-                      <p className="text-xxs">{backgroundImages[currentIndex].rating}</p>
-                      {backgroundImages[currentIndex].jobs && <p className="text-xxs">&nbsp;|&nbsp;{backgroundImages[currentIndex].jobs} Jobs</p>}
+                      <p className="text-xxs">
+                        {backgroundImages[currentIndex].rating}
+                      </p>
+                      {backgroundImages[currentIndex].jobs && (
+                        <p className="text-xxs">
+                          &nbsp;|&nbsp;{backgroundImages[currentIndex].jobs}{" "}
+                          Jobs
+                        </p>
+                      )}
                     </div>
                   </div>
                   <div className="flex items-center mt-1">
-                    <p className="text-sm">{backgroundImages[currentIndex].name},</p>
-                    <p className="text-sm font-bold">&nbsp;{backgroundImages[currentIndex].category}</p>
+                    <p className="text-sm">
+                      {backgroundImages[currentIndex].name},
+                    </p>
+                    <p className="text-sm font-bold">
+                      &nbsp;{backgroundImages[currentIndex].category}
+                    </p>
                   </div>
                 </div>
               </div>
