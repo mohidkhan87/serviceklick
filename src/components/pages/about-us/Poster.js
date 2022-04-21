@@ -14,8 +14,8 @@ const Poster = () => {
                 <div className='w-full'>
                     <div className='relative'>
                         <img src={Banner} alt="Banner" className='w-full' />
-                        <div className='absolute right-44 top-24'>
-                            <h1 className='text-6xl font-bold text-white'>About Us</h1>
+                        <div className='absolute right-44 top-36'>
+                            <h1 className='text-5xl font-bold text-white'>About Us</h1>
                         </div>
                     </div>
                 </div>

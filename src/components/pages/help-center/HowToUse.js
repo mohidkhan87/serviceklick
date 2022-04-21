@@ -79,6 +79,7 @@ const HowToUse = () => {
                                         <div className="flex gap-4 items-center">
                                             <button className="bg-white rounded-full text-secondary font-medium text-xs px-4 py-2">Using Completely</button>
                                         </div>
+                                        <p className="text-white text-xs">by Completly</p>
                                     </div>
                                 </div>
                                 <div className="mt-3">
@@ -98,6 +99,7 @@ const HowToUse = () => {
                                         <div className="flex gap-4 items-center">
                                             <button className="bg-white rounded-full text-secondary font-medium text-xs px-4 py-2">General</button>
                                         </div>
+                                        <p className="text-white text-xs">by Completly</p>
                                     </div>
                                 </div>
                                 <div className="mt-3">
@@ -117,6 +119,7 @@ const HowToUse = () => {
                                         <div className="flex gap-4 items-center">
                                             <button className="bg-white rounded-full text-secondary font-medium text-xs px-4 py-2">Payments</button>
                                         </div>
+                                        <p className="text-white text-xs">by Completly</p>
                                     </div>
                                 </div>
                                 <div className="mt-3">
@@ -136,6 +139,7 @@ const HowToUse = () => {
                                         <div className="flex gap-4 items-center">
                                             <button className="bg-white rounded-full text-secondary font-medium text-xs px-4 py-2">Using Completely</button>
                                         </div>
+                                        <p className="text-white text-xs">by Completly</p>
                                     </div>
                                 </div>
                                 <div className="mt-3">

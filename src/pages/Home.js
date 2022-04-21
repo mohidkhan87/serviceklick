@@ -49,7 +49,7 @@ const Home = () => {
       });
     } else if (value === "how-it-works") {
       window.scrollTo({
-        top: howItWorksRef.current.offsetTop - "185",
+        top: howItWorksRef.current.offsetTop - "145",
         left: 0,
         behavior: "smooth",
       });
@@ -114,7 +114,7 @@ const Home = () => {
           <MarginBottom margin={16} />
           <Figures />
           <MarginBottom margin={16} />
-          <div className="sticky z-30" style={{ top: "90px" }}>
+          <div className="sticky z-30" style={{ top: "65px" }}>
             <StickyNav goToSection={goToSection} />
           </div>
           <MarginBottom margin={16} />

@@ -8,9 +8,10 @@ import Newsroom from "./pages/Newsroom";
 import HowItWorks from "./pages/HowItWorks";
 import HelpCenter from "./pages/HelpCenter";
 import AboutUs from "./pages/AboutUs";
-import CompletlyBusiness from "./pages/CompletlyBusiness";
+// import CompletlyBusiness from "./pages/CompletlyBusiness";
 import Categories from "./pages/Categories";
 import BlogPost from "./pages/BlogPost";
+import Article from "./pages/Article";
 
 function App() {
   return (
@@ -24,8 +25,9 @@ function App() {
         <Route path="/how-it-works" element={<HowItWorks />} />
         <Route path="/help-center" element={<HelpCenter />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/completly-business" element={<CompletlyBusiness />} />
+        {/* <Route path="/completly-business" element={<CompletlyBusiness />} /> */}
         <Route path="/blog-post" element={<BlogPost />} />
+        <Route path="/article" element={<Article />} />
 
         <Route path="/categories" element={<Categories />} />
         <Route path="/end-of-lease-cleaning" element={<Categories />} />

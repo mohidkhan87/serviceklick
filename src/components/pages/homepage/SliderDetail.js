@@ -8,27 +8,30 @@ import Location from "../../../assets/images/pages/homepage/location.png"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import './ServicesSlider.css'
 
 const SliderDetail = ({ banner, bannerTitle, bannerDesc, sliderData, showSearch }) => {
     let [slideBack, setSlideBack] = useState(0);
     const [sliderRef, setSliderRef] = useState(null);
     let showSlides = 4;
     const settings = {
-        centerMode: false,
         dots: false,
-        infinite: false,
+        infinite: true,
         speed: 500,
         swipe: true,
-        slidesToShow: showSlides,
+        centerMode: true,
+        centerPadding: '5%',
         slidesToScroll: 1,
+        slidesToShow: showSlides,
         responsive: [
             {
                 breakpoint: 767,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
-                    centerMode: false,
-                    infinite: true,
+                    centerMode: true,
+                    centerPadding: '5%',
+                    infinite: false,
                     dots: false,
                     swipe: true,
                 },
@@ -36,10 +39,11 @@ const SliderDetail = ({ banner, bannerTitle, bannerDesc, sliderData, showSearch 
             {
                 breakpoint: 500,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
-                    centerMode: false,
-                    infinite: true,
+                    centerMode: true,
+                    centerPadding: '5%',
+                    infinite: false,
                     dots: false,
                     swipe: true,
                 },
@@ -57,8 +61,8 @@ const SliderDetail = ({ banner, bannerTitle, bannerDesc, sliderData, showSearch 
                     />
                     <div className='w-full md:w-2/3 h-full top-0 absolute hidden md:flex items-center right-10'>
                         <div className='w-full h-max'>
-                            <h2 className='font-bold text-primary text-lg xl:text-4xl text-right'>{bannerTitle}</h2>
-                            <p className='font-medium text-primary mt-5 text-right'>{bannerDesc}</p>
+                            <h2 className='font-bold text-primary text-lg lg:text-2xl xl:text-3xl text-right'>{bannerTitle}</h2>
+                            <p className='font-medium text-primary mt-2 text-right text-sm'>{bannerDesc}</p>
                             { showSearch && (
                                 <div className='flex justify-end mt-2'>
                                     <div className="w-full md:w-1/2 bg-white">
@@ -98,11 +102,11 @@ const SliderDetail = ({ banner, bannerTitle, bannerDesc, sliderData, showSearch 
                                 </div>
                                 <div className='absolute bottom-4 px-4 w-full'>
 
-                                    <div className='rounded-full bg-white px-4 py-2'>
-                                        <p className='text-primary font-lg text-center font-medium'>Home Cleaning</p>
-                                        <div className='flex justify-center'>
+                                    <div className='rounded-full bg-white px-2 py-2'>
+                                        <p className='text-primary text-xs text-center font-medium'>Home Cleaning</p>
+                                        <div className='flex justify-center gap-1 mt-1'>
                                             <div><img src={Location} alt="Location" /></div>
-                                            <div><p className='text-secondary text-sm font-medium'>8005, Zürich</p></div>
+                                            <div><p className='text-secondary text-xs font-medium'>8005, Zürich</p></div>
                                         </div>
                                     </div>
                                 </div>

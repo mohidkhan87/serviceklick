@@ -133,7 +133,7 @@ const Services = () => {
                 {!item.isDisabled && (
                   <div
                     className={
-                      "inline-block pb-1 pl-2 pr-4 md:text-xl text-sm font-semibold text-center hover:text-secondary border-b-2 hover:border-secondary transition-colors duration-200 ease-in-out " +
+                      "inline-block pb-1 pl-2 pr-4 md:text-base text-sm 2xl:text-base font-semibold text-center hover:text-secondary border-b-2 hover:border-secondary transition-colors duration-200 ease-in-out " +
                       (openTab === index
                         ? "text-secondary border-secondary"
                         : "text-primary border-transparent")
@@ -145,7 +145,7 @@ const Services = () => {
                 )}
                 {item.isDisabled && (
                   <div
-                    className={"inline-block pb-1 px-2 md:text-xl text-sm font-semibold text-darkGray text-center border-b-2 transition-colors duration-200 ease-in-out " +
+                    className={"inline-block pb-1 px-2 md:text-base text-sm 2xl:text-base font-semibold text-darkGray text-center border-b-2 transition-colors duration-200 ease-in-out " +
                       (openTab === index
                         ? "border-secondary"
                         : "border-transparent")

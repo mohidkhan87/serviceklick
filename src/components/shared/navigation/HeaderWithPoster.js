@@ -68,7 +68,7 @@ const Header = ({ view, isSearching, isAbsolute }) => {
       } ${!isOnTop ? "fixed border-b-2" : ""} ${isSearching ? "z-20" : "z-40"}`}
     >
       <Container>
-        <div className="relative w-full flex sm:flex-row flex-row-reverse justify-between items-center py-5 text-white">
+        <div className="relative w-full flex sm:flex-row flex-row-reverse justify-between items-center py-2 text-white">
           <div
             className="lg:hidden transform sm:rotate-0 rotate-180 flex flex-col gap-1 sm:gap-1.5"
             onClick={() => setIsMenu(!isMenu)}

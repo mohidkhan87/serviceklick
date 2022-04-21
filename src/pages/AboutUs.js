@@ -19,11 +19,11 @@ const AboutUs = () => {
       <Details />
       <MarginBottom margin={16} />
       <TeamSlider />
-      <MarginBottom margin={16} />
+      <MarginBottom margin={24} />
       <Mission />
-      <MarginBottom margin={16} />
+      <MarginBottom margin={24} />
       <Team />
-      <MarginBottom margin={16} />
+      <MarginBottom margin={24} />
       <Posts />
       <MarginBottom margin={24} />
       <ServiceAd />

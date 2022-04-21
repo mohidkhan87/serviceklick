@@ -19,11 +19,11 @@ const ServicesOffer = () => {
 
                 <div className='flex flex-col md:flex-row gap-5'>
                     <div className='flex-1 md:px-8'>
-                        <h2 className='text-primary font-bold text-xl xl:text-4xl'>What kind of service do you offer?</h2>
+                        <h2 className='text-primary font-bold text-xl xl:text-3xl'>What kind of service do you offer?</h2>
                         <div className="mt-10">
                             <div className="w-max flex gap-2 justify-between cursor-pointer" onClick={() => toggleDropdown()}>
                                 <div>
-                                    <p className="text-textGray font-bold text-lg border-b-2 border-primary">
+                                    <p className="text-textGray font-bold text-base border-b-2 border-primary">
                                         Cleaning Service
                                     </p>
                                 </div>
@@ -42,7 +42,7 @@ const ServicesOffer = () => {
                                 </div>
                             }
                         </div>
-                        <h2 className='text-primary font-bold text-xl xl:text-4xl mt-8'>
+                        <h2 className='text-primary font-bold text-xl xl:text-2xl mt-8'>
                             How much do you want to work through our plafform?
                         </h2>
                         <div className='bg-lightGray p-4 w-max rounded-lg mt-5'>
@@ -52,7 +52,7 @@ const ServicesOffer = () => {
                             <div className='absolute w-4 h-4 bg-secondary rounded-full top-1/2 transform -translate-y-1/2' style={{ left: '10%' }}>
                             </div>
                         </div> */}
-                        <div className='my-12 w-full border-2 relative'>
+                        <div className='my-8 w-full border-2 relative'>
                             <Range
                                 step={1}
                                 min={0}
@@ -64,7 +64,7 @@ const ServicesOffer = () => {
                                         {...props}
                                         style={{
                                             ...props.style,
-                                            height: '5px',
+                                            height: '4px',
                                             width: '100%',
                                             backgroundColor: '#C0C3CC',
                                             borderRadius: '44px'
@@ -78,8 +78,8 @@ const ServicesOffer = () => {
                                         {...props}
                                         style={{
                                             ...props.style,
-                                            height: '36px',
-                                            width: '36px',
+                                            height: '26px',
+                                            width: '26px',
                                             backgroundColor: '#660019',
                                             borderRadius: '44px',
                                             outline: 'none'
@@ -88,11 +88,11 @@ const ServicesOffer = () => {
                                 )}
                             />
                         </div>
-                        <h2 className='text-primary font-bold text-xl xl:text-4xl'>What kind of service do you offer?</h2>
+                        <h2 className='text-primary font-bold text-xl xl:text-2xl'>What kind of service do you offer?</h2>
                         <div className="mt-10">
                             <div className="w-max flex gap-2 justify-between cursor-pointer" onClick={() => toggleDropdown2()}>
                                 <div>
-                                    <p className="text-textGray font-bold text-lg border-b-2 border-primary">
+                                    <p className="text-textGray font-bold text-base border-b-2 border-primary">
                                         Cleaning Service
                                     </p>
                                 </div>

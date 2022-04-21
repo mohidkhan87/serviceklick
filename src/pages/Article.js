@@ -2,10 +2,10 @@ import React from 'react'
 
 import MarginBottom from '../components/shared/spacing/MarginBottom';
 import HeaderWithSearch from '../components/shared/navigation/HeaderWithSearch'
-import Content from '../components/pages/blogPost/Content'
+import Content from '../components/pages/article/Content'
 import Footer from '../components/shared/navigation/Footer'
 
-const BlogPost = () => {
+const Article = () => {
   return (
     <>
       <div className='relative z-30'>
@@ -18,4 +18,4 @@ const BlogPost = () => {
   )
 }
 
-export default BlogPost
+export default Article

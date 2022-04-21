@@ -10,10 +10,11 @@ const Card = (props) => {
                 <div className="flex flex-col">
                     <div className="relative">
                         <img src={PostImage} alt="benefit" className="w-full" />
-                        <div className="absolute bottom-4 left-4">
+                        <div className="absolute flex items-center gap-2 bottom-4 left-4">
                             <div className="flex gap-4 items-center">
                                 <button className="bg-white rounded-full text-secondary font-medium text-xs px-4 py-2">{props.category}</button>
                             </div>
+                            <p className="text-white text-xs">by Completly</p>
                         </div>
                     </div>
                     <div className="mt-4">

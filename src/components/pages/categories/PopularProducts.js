@@ -50,17 +50,16 @@ const PopularProducts = () => {
                                     <img src={news1} alt="News" className="w-full" />
                                     <div className="absolute flex items-center gap-2 bottom-4 left-4">
                                         <div className="flex gap-4 items-center">
-                                            <button className="bg-white rounded-full text-secondary font-medium text-xs px-4 py-2">
-                                                Popular
-                                            </button>
+                                            <button className="bg-white rounded-full text-secondary font-medium text-xs px-4 py-2">Popular</button>
                                         </div>
+                                        <p className="text-white text-xs">by Completly</p>
                                     </div>
                                 </div>
                                 <div className="mt-4">
-                                    <p className="text-primary text-xl md:text-xl 2xl:text-2xl font-bold md:leading-7">
+                                    <p className="text-primary text-xl md:text-lg 2xl:text-2xl font-bold md:leading-7">
                                         Bedroom
                                     </p>
-                                    <p className="text-primary">
+                                    <p className="text-primary text-sm 2xl:text-base">
                                         How to find local professionals for pretty much anything.
                                     </p>
                                     <p className="text-darkGray font-medium text-xs mt-4 underline">
@@ -77,17 +76,16 @@ const PopularProducts = () => {
                                     <img src={news2} alt="News" className="w-full" />
                                     <div className="absolute flex items-center gap-2 bottom-4 left-4">
                                         <div className="flex gap-4 items-center">
-                                            <button className="bg-white rounded-full text-secondary font-medium text-xs px-4 py-2">
-                                                News
-                                            </button>
+                                            <button className="bg-white rounded-full text-secondary font-medium text-xs px-4 py-2">News</button>
                                         </div>
+                                        <p className="text-white text-xs">by Completly</p>
                                     </div>
                                 </div>
                                 <div className="mt-4">
-                                    <p className="text-primary text-xl md:text-xl 2xl:text-2xl font-bold md:leading-7">
+                                    <p className="text-primary text-xl md:text-lg 2xl:text-2xl font-bold md:leading-7">
                                         Bathroom
                                     </p>
-                                    <p className="text-primary">
+                                    <p className="text-primary text-sm 2xl:text-base">
                                         How to find local professionals for pretty much anything.
                                     </p>
                                     <p className="text-darkGray font-medium text-xs mt-4 underline">
@@ -104,17 +102,16 @@ const PopularProducts = () => {
                                     <img src={news1} alt="News" className="w-full" />
                                     <div className="absolute flex items-center gap-2 bottom-4 left-4">
                                         <div className="flex gap-4 items-center">
-                                            <button className="bg-white rounded-full text-secondary font-medium text-xs px-4 py-2">
-                                                News
-                                            </button>
+                                            <button className="bg-white rounded-full text-secondary font-medium text-xs px-4 py-2">News</button>
                                         </div>
+                                        <p className="text-white text-xs">by Completly</p>
                                     </div>
                                 </div>
                                 <div className="mt-4">
-                                    <p className="text-primary text-xl md:text-xl 2xl:text-2xl font-bold md:leading-7">
+                                    <p className="text-primary text-xl md:text-lg 2xl:text-2xl font-bold md:leading-7">
                                         Livingroom
                                     </p>
-                                    <p className="text-primary">
+                                    <p className="text-primary text-sm 2xl:text-base">
                                         How to find local professionals for pretty much anything.
                                     </p>
                                     <p className="text-darkGray font-medium text-xs mt-4 underline">
@@ -131,17 +128,16 @@ const PopularProducts = () => {
                                     <img src={news1} alt="News" className="w-full" />
                                     <div className="absolute flex items-center gap-2 bottom-4 left-4">
                                         <div className="flex gap-4 items-center">
-                                            <button className="bg-white rounded-full text-secondary font-medium text-xs px-4 py-2">
-                                                News
-                                            </button>
+                                            <button className="bg-white rounded-full text-secondary font-medium text-xs px-4 py-2">News</button>
                                         </div>
+                                        <p className="text-white text-xs">by Completly</p>
                                     </div>
                                 </div>
                                 <div className="mt-4">
-                                    <p className="text-primary text-xl md:text-xl 2xl:text-2xl font-bold md:leading-7">
+                                    <p className="text-primary text-xl md:text-lg 2xl:text-2xl font-bold md:leading-7">
                                         Kitchen
                                     </p>
-                                    <p className="text-primary">
+                                    <p className="text-primary text-sm 2xl:text-base">
                                         How to find local professionals for pretty much anything.
                                     </p>
                                     <p className="text-darkGray font-medium text-xs mt-4 underline">

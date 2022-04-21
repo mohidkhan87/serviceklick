@@ -1,34 +1,38 @@
-import React, { forwardRef } from 'react'
+import React, {useState} from 'react'
 
 import Container from "../../../ui/Container"
 
 const StickyNav = ({goToSection}) => {
-// const StickyNav = forwardRef(({ goToSection }, ref) => {
+    const [currentTab, setCurrentTab] = useState('benefits')
+    const handleClick = (val) => {
+        setCurrentTab(val)
+        goToSection(val)
+    }
     return (
         <div className='bg-white py-2'>
             <Container>
                 <div>
                     <div className='flex flex-wrap gap-4'>
                         <div>
-                            <button onClick={() => goToSection('benefits')} className='bg-secondary text-white rounded-full px-4 py-1'>Benefits</button>
+                            <button onClick={() => handleClick('benefits')} className={`${currentTab === 'benefits' ? 'bg-secondary text-white':'bg-transparent text-darkGray'} rounded-full px-4 py-1`}>Benefits</button>
                         </div>
                         <div>
-                            <button onClick={() => goToSection('how-it-works')} className='bg-transparent text-darkGray hover:bg-secondary hover:text-white transition duration-300 ease-in-out rounded-full px-4 py-1'>Hows it works</button>
+                            <button onClick={() => handleClick('how-it-works')} className={`${currentTab === 'how-it-works' ? 'bg-secondary text-white':'bg-transparent text-darkGray'} transition duration-300 ease-in-out rounded-full px-4 py-1`}>Hows it works</button>
                         </div>
                         <div>
-                            <button onClick={() => goToSection('how-to-join')} className='bg-transparent text-darkGray hover:bg-secondary hover:text-white transition duration-300 ease-in-out rounded-full px-4 py-1'>How to join</button>
+                            <button onClick={() => handleClick('how-to-join')} className={`${currentTab === 'how-to-join' ? 'bg-secondary text-white':'bg-transparent text-darkGray'} transition duration-300 ease-in-out rounded-full px-4 py-1`}>How to join</button>
                         </div>
                         <div>
-                            <button onClick={() => goToSection('compare')} className='bg-transparent text-darkGray hover:bg-secondary hover:text-white transition duration-300 ease-in-out rounded-full px-4 py-1'>Compare</button>
+                            <button onClick={() => handleClick('compare')} className={`${currentTab === 'compare' ? 'bg-secondary text-white':'bg-transparent text-darkGray'} transition duration-300 ease-in-out rounded-full px-4 py-1`}>Compare</button>
                         </div>
                         <div>
-                            <button onClick={() => goToSection('reviews')} className='bg-transparent text-darkGray hover:bg-secondary hover:text-white transition duration-300 ease-in-out rounded-full px-4 py-1'>Reviews</button>
+                            <button onClick={() => handleClick('reviews')} className={`${currentTab === 'reviews' ? 'bg-secondary text-white':'bg-transparent text-darkGray'} transition duration-300 ease-in-out rounded-full px-4 py-1`}>Reviews</button>
                         </div>
                         <div>
-                            <button onClick={() => goToSection('earnings')} className='bg-transparent text-darkGray hover:bg-secondary hover:text-white transition duration-300 ease-in-out rounded-full px-4 py-1'>Earnings</button>
+                            <button onClick={() => handleClick('earnings')} className={`${currentTab === 'earnings' ? 'bg-secondary text-white':'bg-transparent text-darkGray'} transition duration-300 ease-in-out rounded-full px-4 py-1`}>Earnings</button>
                         </div>
                         <div>
-                            <button onClick={() => goToSection('news')} className='bg-transparent text-darkGray hover:bg-secondary hover:text-white transition duration-300 ease-in-out rounded-full px-4 py-1'>News</button>
+                            <button onClick={() => handleClick('news')} className={`${currentTab === 'news' ? 'bg-secondary text-white':'bg-transparent text-darkGray'} transition duration-300 ease-in-out rounded-full px-4 py-1`}>News</button>
                         </div>
                         <div>
                             <button className="bg-secondary rounded-full font-medium px-5 text-sm py-2 text-white flex items-center">
