@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 
 import "../App.css";
 
@@ -29,6 +29,7 @@ import Footer from "./../components/shared/navigation/Footer";
 
 const Home = () => {
   const [view, setView] = useState("professional");
+  const [currentTab, setCurrentTab] = useState('benefits')
   const benefitsRef = useRef();
   const howItWorksRef = useRef();
   const howToJoinRef = useRef();
@@ -41,6 +42,7 @@ const Home = () => {
     setView(val);
   };
   const goToSection = (value) => {
+    setCurrentTab(value)
     if (value === "benefits") {
       window.scrollTo({
         top: benefitsRef.current.offsetTop - "145",
@@ -85,6 +87,32 @@ const Home = () => {
       });
     }
   };
+  const handleScroll = () => {
+    if (window !== undefined) {
+      if(benefitsRef.current && benefitsRef.current.getBoundingClientRect().top > 0 && benefitsRef.current.getBoundingClientRect().top < 200){
+        setCurrentTab('benefits')
+      } else if(howItWorksRef.current && howItWorksRef.current.getBoundingClientRect().top > 0 && howItWorksRef.current.getBoundingClientRect().top < 200){
+        setCurrentTab('how-it-works')
+      } else if(howToJoinRef.current && howToJoinRef.current.getBoundingClientRect().top > 0 && howToJoinRef.current.getBoundingClientRect().top < 200){
+        setCurrentTab('how-to-join')
+      } else if(compareRef.current && compareRef.current.getBoundingClientRect().top > 0 && compareRef.current.getBoundingClientRect().top < 200){
+        setCurrentTab('compare')
+      } else if(reviewsRef.current && reviewsRef.current.getBoundingClientRect().top > 0 && reviewsRef.current.getBoundingClientRect().top < 200){
+        setCurrentTab('reviews')
+      } else if(earningsRef.current && earningsRef.current.getBoundingClientRect().top > 0 && earningsRef.current.getBoundingClientRect().top < 200){
+        setCurrentTab('earnings')
+      } else if(newsRef.current && newsRef.current.getBoundingClientRect().top > 0 && newsRef.current.getBoundingClientRect().top < 200){
+        setCurrentTab('news')
+      }
+    }
+  };
+  useEffect(() => {
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div>
       {view === "professional" ? (
@@ -115,7 +143,7 @@ const Home = () => {
           <Figures />
           <MarginBottom margin={16} />
           <div className="sticky z-30" style={{ top: "65px" }}>
-            <StickyNav goToSection={goToSection} />
+            <StickyNav currentTab={currentTab} goToSection={goToSection} />
           </div>
           <MarginBottom margin={16} />
           <DiscoverBenefits

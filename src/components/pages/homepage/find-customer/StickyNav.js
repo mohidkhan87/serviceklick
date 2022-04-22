@@ -1,11 +1,9 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 import Container from "../../../ui/Container"
 
-const StickyNav = ({goToSection}) => {
-    const [currentTab, setCurrentTab] = useState('benefits')
+const StickyNav = ({currentTab, goToSection}) => {
     const handleClick = (val) => {
-        setCurrentTab(val)
         goToSection(val)
     }
     return (

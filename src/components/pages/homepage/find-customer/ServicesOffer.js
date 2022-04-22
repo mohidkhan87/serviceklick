@@ -52,7 +52,7 @@ const ServicesOffer = () => {
                             <div className='absolute w-4 h-4 bg-secondary rounded-full top-1/2 transform -translate-y-1/2' style={{ left: '10%' }}>
                             </div>
                         </div> */}
-                        <div className='my-8 w-full border-2 relative'>
+                        <div className='my-8 w-full relative'>
                             <Range
                                 step={1}
                                 min={0}
