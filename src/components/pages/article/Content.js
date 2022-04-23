@@ -5,7 +5,6 @@ import Container from "../../ui/Container";
 import CustomModalVideo from "../../shared/CustomModalVideo";
 
 import Nav from "./Nav";
-import Section from "./Section";
 import PostCard from "../../shared/cards/PostCard";
 
 import thumbnailImage from "../../../assets/images/pages/blog-post/thumbnail.png";

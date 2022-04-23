@@ -10,11 +10,6 @@ import Flow from '../components/pages/how-it-works/Flow';
 import Reviews from '../components/pages/homepage/Reviews'
 
 const HowItWorks = () => {
-  const postsData = [
-    { title: 'Getting Started with Completely',date:'February 20, 2022', category: 'Using Completly' },
-    { title: 'Providing clear job instructions',date:'February 20, 2022', category: 'General' },
-    { title: 'Get help with payments',date:'February 20, 2022', category: 'Payments' }
-  ];
   return (
     <div>
       <div className="relative z-30">
